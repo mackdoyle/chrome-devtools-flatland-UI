@@ -1,0 +1,136 @@
+.toolbar {
+  flex: 0 0 30px;
+}
+
+.panel, .drawer, .fill {
+  color: #fff;
+  background: #25292C;
+}
+
+#elements-crumbs {
+  flex-basis: 24px;
+  background: #31353A;
+  border-top: 1px solid #121316;
+}
+
+.crumbs .crumb {
+  height: 24px;
+  padding-top: 2px;
+  border-right: 1px solid #121316;
+}
+
+.tabbed-pane-header, #element-crumbs {
+  background: #121316 !important;
+  color: #fff !important;
+  border-bottom: 1px solid #121316;
+}
+
+body.inactive #drawer-contents .tabbed-pane-header {
+  border-top: 1px solid #31353A;
+}
+
+#drawer-contents > .tabbed-pane > .tabbed-pane-header {
+  border-bottom: 1px solid #31353A;
+}
+
+#console-messages {
+  border-top: 1px solid #121316;
+}
+
+.tabbed-pane-header .tabbed-pane-header-tab {
+  box-sizing: initial;
+  text-align: center;
+  padding: 6px 2px;
+  height: 24px;
+  margin: 0;
+  background: #31353A !important;
+  color: #77797D;
+  border-right: 1px solid #121316;
+}
+
+.tabbed-pane-header .tabbed-pane-header-tab.selected {
+  background: #4B4F53 !important;
+  color: #f4f4f4;
+  border: none !important;
+}
+
+ol.elements-tree-outline .selected {
+  background: #303337;
+}
+
+.webkit-html-tag-name,
+.styles-section .simple-selector.selector-matches, .styles-section .selector {
+  color: #BDDA6E;
+}
+
+.webkit-html-tag {
+  color: #65A4A4;
+}
+
+.webkit-html-attribute-name {
+  color: #E0DC6D;
+}
+
+.webkit-html-comment {
+  color: #77797D;
+}
+
+.webkit-html-attribute-value {
+  color: #A3DEF2;
+}
+
+.properties .value {
+  color: #DCF080;
+}
+
+.webkit-css-property {
+  color: #73AABD;
+}
+
+select.status-bar-item {
+  color: #A3E2EE;
+  text-shadow: none;
+}
+
+.console-message, .console-user-command {
+  padding: 5px 0;
+  color: #A3E2EE;
+  border-bottom: 1px solid #31353A;
+}
+
+.console-error-level::before {
+  top: 50%;
+}
+
+#console-messages a {
+  color: #BDDA6E;
+}
+
+.styles-section {
+  border-bottom: 1px solid #121316;
+}
+
+.tabbed-pane-header {
+  flex: 0 0 30px;
+  border-bottom: 1px solid #77797D;
+}
+
+.toolbar-controls-right {
+  padding-top: 2px;
+  padding-left: 7px;
+  background: #31353A;
+}
+
+.toolbar-controls-left {
+  padding: 0;
+  background: #31353A;
+  border-right: 1px solid #121316;
+}
+
+.glyph-background {
+  background: none;
+}
+
+.glyph {
+  top: 0;
+}
