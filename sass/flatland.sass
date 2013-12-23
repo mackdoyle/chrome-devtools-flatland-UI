@@ -192,6 +192,205 @@ select.status-bar-item
   border-top: 1px solid $grey-light
   color: $white
 
+//~~~~ SOURCES ~~~~//
+.panel.sources
+
+  // Right sidebar
+  .split-view-contents-first
+    .tabbed-pane-header
+      flex-basis: 24px
+
+      .tabbed-pane-header-tab
+        padding: 4px
+        font-size: 10px
+
+        .close-button-gray
+          background-color: $grey-lightest
+          top: 3px
+          left: 4px
+          &:hover
+            background-color: $white
+            background-position: -175px -96px
+
+
+    .navigator li
+      height: 20px
+      font-size: 10px
+      color: $grey-lightest
+
+      &.selected
+        padding-top: 2px
+        background: $blue
+        color: $white
+
+  .CodeMirror
+    .CodeMirror-linenumber
+      padding-left: 0
+
+    .CodeMirror-sizer
+      margin-left: 40px
+
+    .CodeMirror-gutters
+      border-right: 1px solid $grey-darkest
+
+    .CodeMirror-gutter
+      background-color: $grey-dark
+      color: $grey-light
+
+    .CodeMirror-cursor
+      border-left: 1px solid $white
+      z-index: 3
+
+  #sources-panel-sources-view .sources-status-bar
+    flex-basis: 30px
+    padding: 5px
+    background: $grey-dark
+    border-top: 1px solid $grey-light
+    color: $white
+
+  .sidebar-pane-stack#scripts-debug-sidebar-contents, #scripts-sidebar-stack-pane
+    top: 29px
+
+  #scripts-debug-toolbar, .sidebar-pane-title
+    height: 30px
+    padding: 5px
+    background: $grey
+    border-top: 1px solid $grey-darkest
+    border-bottom: 1px solid $grey-darkest
+    color: $white
+
+    .status-bar-item
+      top: -3px
+
+  .sidebar-pane
+    padding: 5px 0
+
+  .placard, .info
+    background: $grey
+
+    &.selected
+      background: $blue
+      border: none
+
+    .subtitle
+      color: $grey-lightest
+
+//~~~~ TIMELINE ~~~~//
+.panel.timeline
+
+  .timeline-records-title, .timeline-records-list
+    background: $grey-dark
+    color: $white
+
+  .resources-dividers-label-bar
+    padding: 5px
+    background: $grey-light
+    color: $white
+
+  .timeline-details-view-title
+    flex-basis: 30px
+    padding: 5px
+    background: $grey-dark
+    border-top: 1px solid $grey-light
+    color: $white
+
+//~~~~ PROFILE ~~~~//
+.panel.profiles
+  .panel-enabler-view, .profiles-sidebar-tree-box
+    background: $grey-dark
+    color: $white
+
+  .panel-enabler-view button:not(.status-bar-item)
+    background: $blue
+    border: none
+    border-radius: 3px
+    color: $white
+
+    body.inactive &
+      background: $grey-lightest
+      color: $grey
+
+.data-grid
+  table.data
+    background: none
+
+  .data-container
+    top: 25px
+
+  th
+    padding: 5px
+    background: $grey-dark !important
+    border-bottom-color: $blue !important
+
+  td
+    padding: 5px
+    color: $grey-lightest
+    a
+      color: $blue-light
+
+  tr:nth-child(odd)
+    background: $grey-darkest
+
+  tr:nth-child(even)
+    background: $grey-dark
+
+  tr:hover:not(:last-child)
+    background: $blue
+    td
+      color: $white
+      a
+        color: $blue-lightest
+
+  .data-grid-resizer
+    width: 1px
+    background: $grey-light
+
+//~~~~ RESOURCES ~~~~//
+.resources.panel
+  .sidebar li
+    height: 20px
+    font-size: 10px
+    color: $grey-lightest
+
+    .base-storage-tree-element-title, img
+      padding-top: 3px
+
+    &.selected
+      background: $blue
+      color: $white
+
+      .selection
+        height: 22px
+        background: $blue !important
+        border: none !important
+
+//~~~~ AUDITS ~~~~//
+.panel.audits
+  .audit-launcher-view .audit-launcher-view-content
+    background: $grey-dark
+    color: $white
+
+  .sidebar-tree-section
+    padding: 5px
+    color: $grey-lightest
+    text-shadow: none
+
+  .audit-launcher-view div.button-container > button
+    background: $blue
+    border: none
+    border-radius: 3px
+    color: $white
+
+    body.inactive &
+      background: $grey-lightest
+      color: $grey
+
+//~~~~ PAGESPEED ~~~~//
+
+#pagespeedpage div
+  background: $grey-dark !important
+  color: $white !important
+
 //~~~~ GLOBAL ELEMENTS ~~~~//
 #console-messages,
 .console-view-wrapper,
@@ -206,11 +405,12 @@ select.status-bar-item
 .sidebar-overlay,
 .styles-section.read-only,
 .split-view-vertical .sidebar-pane.composite .properties-tree,
-.panel:not(.timeline):not(.profiles),
-.panel:not(.timeline):not(.profiles) .split-view-contents,
+.panel:not(.elements),
+.panel:not(.extension-panel),
 #network-views .CodeMirror-lines,
 #script-view-fallback,
-.panel-status-bar
+.panel-status-bar,
+.sidebar, body.inactive .sidebar
   color: $white
   background: $grey-dark
 
@@ -237,6 +437,11 @@ select.status-bar-item
 input, input[type="password"], input[type="search"], isindex, .search-replace
   padding: 3px 8px
   background-color: $grey-light
+
+.status-bar
+  background: $grey-dark
+  border-top: 1px solid $grey-light
+  color: $white
 
 // GLYPHS
 
