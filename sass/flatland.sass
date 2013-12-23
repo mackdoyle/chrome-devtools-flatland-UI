@@ -426,10 +426,56 @@ select.status-bar-item
       color: $grey
 
 //~~~~ PAGESPEED ~~~~//
-
 #pagespeedpage div
   background: $grey-dark !important
   color: $white !important
+
+//~~~~ SETTINGS ~~~~//
+#settings-screen
+  .help-window-main
+    color: $white
+    background: $grey-dark
+    box-shadow: none
+    border: 3px solid $grey-darkest
+
+  .help-container-wrapper label
+    color: $grey-lightest
+    &:hover
+      color: $white
+
+  .help-section-title
+    color: $blue
+
+  .settings-tab select
+    padding: 5px
+    -webkit-appearance: none
+    background: $grey-darkest
+    border: none
+
+  .tabbed-pane-header
+    background: none !important
+
+    .tabbed-pane-header-tab
+      padding-top: 9px
+      background: none !important
+      &.selected
+        color: $blue
+
+  .settings-tab-text-button
+    margin: 0 5px
+    background: $blue
+    border: 0 !important
+    border-radius: 2px
+    box-shadow: none
+    text-shadow: none
+    color: $white
+
+  .settings-tab .settings-list-container
+    background: none
+
+  .no-file-systems-message
+    padding: 8px
+    background: $grey-darkest
 
 //~~~~ GLOBAL ELEMENTS ~~~~//
 #console-messages,
@@ -477,9 +523,13 @@ select.status-bar-item
       border-right: 1px solid $grey-darkest
       border-left: 1px solid transparent
 
-.overrides-view input[type=text], .overrides-view select, input, input[type="password"], input[type="search"], isindex, .search-replace
-  padding: 3px 8px
+.overrides-view input[type=text], .overrides-view select,
+input, input[type="password"], input[type="text"],
+input[type="search"], isindex, .search-replace,
+.settings-tab input:not([type]), .settings-tab input[type="text"]
+  padding: 5px 8px
   background-color: $grey-light
+  border: 1px solid $grey-darkest
   color: $white
 
 .overrides-activate-device #tab-device,
@@ -487,6 +537,18 @@ select.status-bar-item
 .overrides-activate-user-agent #tab-user-agent,
 .overrides-activate-sensors #tab-sensors
   color: $blue-lightest
+
+.overrides-view .overrides-footer
+  padding: 5px
+  background: $grey-dark
+  border-top: 1px solid $grey-light
+  color: $white
+
+button.overrides-swap
+  background: $blue
+  border: none
+  margin: 5px 10px
+  color: darken($blue, 50%)
 
 .status-bar
   background: $grey-dark
