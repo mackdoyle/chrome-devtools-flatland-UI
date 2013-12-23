@@ -146,6 +146,8 @@ select.status-bar-item {
   border-top: 1px solid #4b4f53;
   color: #f4f4f4; }
 
+.panel.sources .sidebar-overlay {
+  box-shadow: none; }
 .panel.sources .split-view-contents-first .tabbed-pane-header {
   flex-basis: 24px; }
   .panel.sources .split-view-contents-first .tabbed-pane-header .tabbed-pane-header-tab {
