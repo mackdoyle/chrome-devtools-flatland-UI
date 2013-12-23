@@ -458,7 +458,10 @@ select.status-bar-item
     &.selected
       background: $grey-light !important
       color: $white
-      border-right: 1px solid transparent
+      -webkit-border-image: none
+      border: none
+      border-right: 1px solid $grey-darkest
+      border-left: 1px solid transparent
 
 input, input[type="password"], input[type="search"], isindex, .search-replace
   padding: 3px 8px
