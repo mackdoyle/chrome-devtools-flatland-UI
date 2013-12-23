@@ -21,6 +21,9 @@ $blue: #2195F0
 $white: #f4f4f4
 
 //~~~~ TOOLBAR ~~~~//
+body#-blink-dev-tools .toolbar-background
+  background: $grey-darkest !important
+
 .toolbar
   flex: 0 0 36px
   background: $grey-darkest !important
@@ -34,6 +37,7 @@ $white: #f4f4f4
       color: $white
 
   .toolbar-controls-left
+    opacity: 1
     background: $grey-darkest
 
   button.status-bar-item
@@ -49,6 +53,9 @@ $white: #f4f4f4
 //~~~~ INSPECTOR MAIN ~~~~//
 ol.elements-tree-outline .selected
   background: $grey
+
+  .selection
+    background: $grey !important
 
 .webkit-html-tag-name,
 .styles-section .simple-selector.selector-matches, .styles-section .selector
@@ -180,6 +187,9 @@ select.status-bar-item
   th, td
     border: 1px solid $grey-light !important
 
+  .data-container
+    top: 37px
+
 .network.panel .data-grid
   th.sort-descending,
   th.sort-ascending
@@ -294,6 +304,21 @@ select.status-bar-item
     background: $grey-dark
     border-top: 1px solid $grey-light
     color: $white
+
+  #timeline-overview-sidebar .sidebar-tree-item.selected
+    background: $blue
+    border-left: 6px solid $blue-lightest
+    color: $white
+
+  #timeline-overview-frames canvas
+    background: $grey-dark
+
+  #memory-graphs-container .split-view-contents-first
+    background: $grey-dark
+
+    .sidebar-tree.sidebar-tree-section
+      text-shadow: none
+      color: $grey-lightest
 
 //~~~~ PROFILE ~~~~//
 .panel.profiles
@@ -433,7 +458,7 @@ select.status-bar-item
     &.selected
       background: $grey-light !important
       color: $white
-      border: none !important
+      border-right: 1px solid transparent
 
 input, input[type="password"], input[type="search"], isindex, .search-replace
   padding: 3px 8px
