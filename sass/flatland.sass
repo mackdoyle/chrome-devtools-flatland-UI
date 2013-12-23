@@ -153,6 +153,8 @@ select.status-bar-item
 
   a
     color: $green-light
+    &:hover
+      color: darken($green-light, 20%)
 
   .console-error-level .console-message-text,
   .console-error-level .section > .header .title
@@ -169,6 +171,11 @@ select.status-bar-item
 .search-status-bar-summary
   border-top: 1px solid $grey-light
   background: $grey-darkest
+
+#drawer-contents .tabbed-pane-header .tabbed-pane-header-tab
+  height: 18px
+  border-left: 1px solid transparent
+  border-bottom: 1px solid $grey-darkest
 
 //~~~~ NETWORK ~~~~//
 .panel-status-bar
@@ -190,10 +197,13 @@ select.status-bar-item
   .data-container
     top: 37px
 
-.network.panel .data-grid
-  th.sort-descending,
-  th.sort-ascending
+.network.panel
+  .data-grid th
     background: $grey-dark
+
+  .tabbed-pane-header .tabbed-pane-header-tab
+    font-size: 10px
+    padding-top: 7px
 
 .network-summary-bar
   flex-basis: 30px
@@ -201,6 +211,10 @@ select.status-bar-item
   background: $grey-dark
   border-top: 1px solid $grey-light
   color: $white
+
+#network-views .network-item-view .tabbed-pane-header
+  flex-basis: 30px
+  padding-top: 0
 
 //~~~~ SOURCES ~~~~//
 .panel.sources
@@ -463,9 +477,16 @@ select.status-bar-item
       border-right: 1px solid $grey-darkest
       border-left: 1px solid transparent
 
-input, input[type="password"], input[type="search"], isindex, .search-replace
+.overrides-view input[type=text], .overrides-view select, input, input[type="password"], input[type="search"], isindex, .search-replace
   padding: 3px 8px
   background-color: $grey-light
+  color: $white
+
+.overrides-activate-device #tab-device,
+.overrides-activate-viewport #tab-viewport,
+.overrides-activate-user-agent #tab-user-agent,
+.overrides-activate-sensors #tab-sensors
+  color: $blue-lightest
 
 .status-bar
   background: $grey-dark

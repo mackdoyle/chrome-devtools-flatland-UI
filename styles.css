@@ -114,6 +114,8 @@ select.status-bar-item {
     top: 1.1em; }
   #console-messages a {
     color: #bdda6e; }
+    #console-messages a:hover {
+      color: #90b42e; }
   #console-messages .console-error-level .console-message-text,
   #console-messages .console-error-level .section > .header .title {
     color: #fb5c69 !important; }
@@ -127,6 +129,11 @@ select.status-bar-item {
 .search-status-bar-summary {
   border-top: 1px solid #4b4f53;
   background: #121316; }
+
+#drawer-contents .tabbed-pane-header .tabbed-pane-header-tab {
+  height: 18px;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #121316; }
 
 .panel-status-bar {
   flex-basis: 36px;
@@ -143,9 +150,11 @@ select.status-bar-item {
 .network-log-grid.data-grid .data-container {
   top: 37px; }
 
-.network.panel .data-grid th.sort-descending,
-.network.panel .data-grid th.sort-ascending {
+.network.panel .data-grid th {
   background: #25292c; }
+.network.panel .tabbed-pane-header .tabbed-pane-header-tab {
+  font-size: 10px;
+  padding-top: 7px; }
 
 .network-summary-bar {
   flex-basis: 30px;
@@ -153,6 +162,10 @@ select.status-bar-item {
   background: #25292c;
   border-top: 1px solid #4b4f53;
   color: #f4f4f4; }
+
+#network-views .network-item-view .tabbed-pane-header {
+  flex-basis: 30px;
+  padding-top: 0; }
 
 .panel.sources .sidebar-overlay {
   box-shadow: none; }
@@ -357,9 +370,16 @@ select.status-bar-item {
       border-right: 1px solid #121316;
       border-left: 1px solid transparent; }
 
-input, input[type="password"], input[type="search"], isindex, .search-replace {
+.overrides-view input[type=text], .overrides-view select, input, input[type="password"], input[type="search"], isindex, .search-replace {
   padding: 3px 8px;
-  background-color: #4b4f53; }
+  background-color: #4b4f53;
+  color: #f4f4f4; }
+
+.overrides-activate-device #tab-device,
+.overrides-activate-viewport #tab-viewport,
+.overrides-activate-user-agent #tab-user-agent,
+.overrides-activate-sensors #tab-sensors {
+  color: #a3def2; }
 
 .status-bar {
   background: #25292c;
