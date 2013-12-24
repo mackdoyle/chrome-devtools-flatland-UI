@@ -3,6 +3,7 @@
   "author": "Chase Adams",
   "version": "1.0.0",
   "description": "A modified port of the SublimeText Flatland Theme for Chrome DevTools.",
+  "homepage_url": "https://github.com/realchaseadams/chrome-devtools-flatland-UI",
   "devtools_page": "devtools.html",
   "manifest_version": 2,
   "icons": { "16": "icons/icon16.png",
