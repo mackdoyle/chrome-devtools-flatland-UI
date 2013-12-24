@@ -5,6 +5,7 @@ $grey: #31353A
 $grey-light: #4B4F53
 $grey-lightest: #77797D
 
+$orange: #F29A46
 $red-light: #FB5C69
 
 $mustard: #E0DC6D
@@ -23,6 +24,7 @@ $white: #f4f4f4
 //~~~~ TOOLBAR ~~~~//
 body#-blink-dev-tools .toolbar-background
   background: $grey-darkest !important
+  border: none
 
 .toolbar
   flex: 0 0 36px
@@ -39,6 +41,13 @@ body#-blink-dev-tools .toolbar-background
   .toolbar-controls-left
     opacity: 1
     background: $grey-darkest
+
+    button.status-bar-item.toggled-on
+      background: $blue !important
+
+      .glyph
+        background-color: $white !important
+        opacity: 100%
 
   button.status-bar-item
     margin: 3px
@@ -64,20 +73,32 @@ ol.elements-tree-outline .selected
 .webkit-html-tag
   color: $cyan
 
+  span
+    color: $mustard
+
+.webkit-html-tag-name
+  color: $green-light
+
 .webkit-html-attribute-name
   color: $mustard
-
-.webkit-html-comment
-  color: $grey-lightest
 
 .webkit-html-attribute-value
   color: $blue-lightest
 
-.properties .value
-  color: $vomit
+span.webkit-html-text-node.bogus
+  color: $blue
+
+.webkit-html-pseudo-element
+  color: $red-light
+
+.webkit-html-comment
+  color: $grey-lightest
 
 .webkit-css-property
   color: $blue-light
+
+.metrics-and-styles .properties .value
+  color: $orange
 
 .inspector-footer.status-bar
   padding: 5px
@@ -119,6 +140,41 @@ ol.elements-tree-outline .selected
   background: $grey-dark
   border-bottom: 1px solid $grey-light !important
 
+.sidebar-tabbed-pane
+  .tabbed-pane-header
+    flex-basis: 24px
+    font-size: 10px
+    .tabbed-pane-header-tab
+      padding: 4px 1px
+
+.events-pane
+  .section
+    padding: 5px
+    &:not(:nth-of-type(1))
+      border-top: 1px solid $grey-darkest
+
+  .name
+    color: $white
+
+.console-formatted-function
+  color: $mustard
+
+.console-formatted-string
+  color: $blue-lightest
+
+.console-formatted-boolean
+  color: $green-light
+
+.console-formatted-number
+  font-weight: bold
+  color: $green-light
+
+.console-formatted-array
+  color: $blue
+
+.console-formatted-object
+  color: $orange
+
 //~~~~ BREADCRUMBS ~~~~//
 #elements-crumbs
   flex-basis: 24px
@@ -142,6 +198,9 @@ ol.elements-tree-outline .selected
 select.status-bar-item
   color: $blue-lightest
   text-shadow: none
+
+  &:empty, &:empty + .status-bar-select-arrow
+    display: none
 
 #console-messages
   border-top: 1px solid $grey-darkest
@@ -237,7 +296,6 @@ select.status-bar-item
             background-color: $white
             background-position: -175px -96px
 
-
     .navigator li
       height: 20px
       font-size: 10px
@@ -247,24 +305,6 @@ select.status-bar-item
         padding-top: 2px
         background: $blue
         color: $white
-
-  .CodeMirror
-    .CodeMirror-linenumber
-      padding-left: 0
-
-    .CodeMirror-sizer
-      margin-left: 40px
-
-    .CodeMirror-gutters
-      border-right: 1px solid $grey-darkest
-
-    .CodeMirror-gutter
-      background-color: $grey-dark
-      color: $grey-light
-
-    .CodeMirror-cursor
-      border-left: 1px solid $white
-      z-index: 3
 
   #sources-panel-sources-view .sources-status-bar
     flex-basis: 30px
@@ -461,21 +501,16 @@ select.status-bar-item
       &.selected
         color: $blue
 
-  .settings-tab-text-button
-    margin: 0 5px
-    background: $blue
-    border: 0 !important
-    border-radius: 2px
-    box-shadow: none
-    text-shadow: none
-    color: $white
-
   .settings-tab .settings-list-container
-    background: none
+    background: $white
+
+  .settings-experiments-warning-subsection-warning
+    color: $red-light
 
   .no-file-systems-message
     padding: 8px
     background: $grey-darkest
+    color: $white
 
 //~~~~ GLOBAL ELEMENTS ~~~~//
 #console-messages,
@@ -555,6 +590,25 @@ button.overrides-swap
   border-top: 1px solid $grey-light
   color: $white
 
+.settings-tab-text-button
+  margin: 0 5px
+  background: $blue
+  border: 0 !important
+  border-radius: 2px
+  box-shadow: none
+  text-shadow: none
+  color: $white
+  &:not(:disabled):hover
+    background: darken($blue, 20%)
+    box-shadow: none
+    color: $white
+
+a
+  color: $green-light !important
+  &:hover
+    color: darken($green-light, 20%) !important
+
+
 // GLYPHS
 
 button.status-bar-item .glyph.shadow, .glyph.shadow
@@ -588,6 +642,9 @@ button.status-bar-item.toggled-on .glyph:not(.shadow)
 button.status-bar-item .glyph
   left: -3px
 
+.long-click-glyph
+  color: $grey-lightest
+
 // Scrollbar Styling
 ::-webkit-scrollbar-track
   width: 8px
@@ -602,3 +659,126 @@ button.status-bar-item .glyph
   width: 8px
   background-color: $grey-light
   border-radius: 6px
+
+.properties
+  .name
+    color: $blue !important
+    &.dimmed
+      color: $blue-lightest
+
+.sidebar-pane-toolbar
+  .panel.elements & > select.select-settings
+    -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneSettingsButtons.png)
+    background: $white
+    &:hover
+      background: $blue
+
+  .panel.elements & > select.select-filter
+    -webkit-mask-image: url(Images/paneFilterButtons.png)
+    background: $white
+    &:hover
+      background: $blue
+
+  & > .pane-title-button
+    &.add
+      -webkit-mask-image: url(Images/paneAddButtons.png)
+      background: $white
+      background-image: none
+      &:hover
+        background: $blue
+
+    &.element-state
+      -webkit-mask-image: url(Images/paneElementStateButtons.png)
+      background: $white
+      background-image: none
+      &:hover
+        background: $blue
+
+// Syntax Highlighting
+.CodeMirror
+  .CodeMirror-linenumber
+    padding-left: 0
+
+  .CodeMirror-sizer
+    margin-left: 40px
+
+  .CodeMirror-gutters
+    border-right: 1px solid $grey-darkest
+
+  .CodeMirror-gutter
+    background-color: $grey-dark
+    color: $grey-light
+
+  .CodeMirror-cursor
+    border-left: 1px solid $white
+    z-index: 3
+
+  // Source Syntax Highlighting
+  // HTML/XML
+  .cm-xml-tag
+    color: $vomit
+
+  .cm-xml-attribute
+    color: $mustard
+
+  .cm-xml-string
+    color: $blue-lightest
+
+  .cm-xml-comment
+    color: $grey-lightest
+
+  // Javascript
+  .cm-js-keyword
+    color: $mustard
+
+  .cm-js-def
+    color: $orange
+
+  .cm-js-string
+    color: $blue-lightest
+
+  .cm-js-number
+    color: $vomit
+
+  .cm-js-string-2
+    color: $orange
+
+  .cm-js-comment
+    color: $grey-lightest
+
+  .cm-search-highlight
+    color: $orange
+
+  .cm-css-qualifier
+    color: $blue
+
+  .cm-css-tag
+    color: $blue-light
+
+  .cm-css-operator
+    color: $mustard
+
+  .cm-css-property
+    color: $blue-light
+
+  .cm-css-string, .cm-css-string-2
+    color: $orange
+
+  .cm-css-number
+    color: $vomit
+
+  .cm-css-variable-2
+    font-style: italic
+    color: $green-light
+
+  .cm-css-atom, .cm-css-keyword
+    color: $vomit
+
+  .cm-css-meta
+    color: $red-light
+
+
+  //Editing
+  .CodeMirror-matchingbracket
+    text-decoration: underline
+    color: $white !important
