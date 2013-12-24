@@ -1,7 +1,11 @@
 {
-  "name": "devtools-flatland",
-  "version": "0.0.0",
-  "description": "Enable DevTools experiments in about:flags, toggle \"Allow UI themes\" experiment.",
+  "name": "DevTools Theme: Flatland",
+  "author": "Chase Adams",
+  "version": "1.0.0",
+  "description": "A modified port of the SublimeText Flatland Theme for Chrome DevTools.",
   "devtools_page": "devtools.html",
-  "manifest_version": 2
+  "manifest_version": 2,
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+            "128": "icons/icon128.png" }
 }
