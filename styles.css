@@ -163,6 +163,14 @@ select.status-bar-item {
   #console-messages #console-prompt::before, #console-messages .console-group-title::before,
   #console-messages .console-error-level::before {
     top: 1.1em; }
+  #console-messages .console-group-messages .section > .header .title {
+    color: #f4f4f4; }
+  #console-messages .section .properties .name, #console-messages .event-properties .name, #console-messages .console-formatted-object .name {
+    color: #73aabd !important; }
+    #console-messages .section .properties .name.dimmed, #console-messages .event-properties .name.dimmed, #console-messages .console-formatted-object .name.dimmed {
+      color: #a3def2; }
+  #console-messages .console-formatted-object {
+    color: #f29a46; }
   #console-messages a {
     color: #bdda6e; }
     #console-messages a:hover {
@@ -170,7 +178,7 @@ select.status-bar-item {
   #console-messages .console-error-level .console-message-text,
   #console-messages .console-error-level .section > .header .title {
     color: #fb5c69 !important; }
-  #console-messages .console-message, #console-messages .console-user-command {
+  #console-messages .console-message, #console-messages .console-user-command, #console-messages #console-prompt {
     padding: 5px 0;
     color: #a3def2;
     border-bottom: 1px solid #31353a; }
@@ -267,6 +275,10 @@ select.status-bar-item {
   .panel.sources .placard .subtitle, .panel.sources .info .subtitle {
     color: #77797d; }
 
+.cm-execution-line {
+  background-color: #121316 !important;
+  outline: none !important; }
+
 .panel.timeline .timeline-records-title, .panel.timeline .timeline-records-list {
   background: #25292c;
   color: #f4f4f4; }
@@ -291,6 +303,10 @@ select.status-bar-item {
   .panel.timeline #memory-graphs-container .split-view-contents-first .sidebar-tree.sidebar-tree-section {
     text-shadow: none;
     color: #77797d; }
+.panel.timeline .timeline-aggregated-info-legend, .panel.timeline .timeline-details-view-block {
+  color: #f4f4f4; }
+.panel.timeline .timeline-tree-item .data.dimmed, .panel.timeline .timeline-details-view-row-title {
+  color: #77797d; }
 
 .panel.profiles .panel-enabler-view, .panel.profiles .profiles-sidebar-tree-box {
   background: #25292c;
@@ -559,6 +575,12 @@ button.status-bar-item .glyph {
   background: #f4f4f4;
   background-image: none; }
   .sidebar-pane-toolbar > .pane-title-button.add:hover {
+    background: #2195f0; }
+.sidebar-pane-toolbar > .pane-title-button.pane-title-button.refresh {
+  -webkit-mask-image: url(Images/paneRefreshButtons.png);
+  background: #f4f4f4;
+  background-image: none; }
+  .sidebar-pane-toolbar > .pane-title-button.pane-title-button.refresh:hover {
     background: #2195f0; }
 .sidebar-pane-toolbar > .pane-title-button.element-state {
   -webkit-mask-image: url(Images/paneElementStateButtons.png);

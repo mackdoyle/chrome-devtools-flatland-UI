@@ -210,6 +210,17 @@ select.status-bar-item
   .console-error-level::before
     top: 1.1em
 
+  .console-group-messages .section > .header .title
+    color: $white
+
+  .section .properties .name, .event-properties .name, .console-formatted-object .name
+    color: $blue-light !important
+    &.dimmed
+      color: $blue-lightest
+
+  .console-formatted-object
+    color: $orange
+
   a
     color: $green-light
     &:hover
@@ -219,7 +230,7 @@ select.status-bar-item
   .console-error-level .section > .header .title
     color: $red-light !important
 
-  .console-message, .console-user-command
+  .console-message, .console-user-command, #console-prompt
     padding: 5px 0
     color: $blue-lightest
     border-bottom: 1px solid $grey
@@ -340,6 +351,10 @@ select.status-bar-item
     .subtitle
       color: $grey-lightest
 
+.cm-execution-line
+  background-color: $grey-darkest !important
+  outline: none !important
+
 //~~~~ TIMELINE ~~~~//
 .panel.timeline
 
@@ -373,6 +388,12 @@ select.status-bar-item
     .sidebar-tree.sidebar-tree-section
       text-shadow: none
       color: $grey-lightest
+
+  .timeline-aggregated-info-legend, .timeline-details-view-block
+    color: $white
+
+  .timeline-tree-item .data.dimmed, .timeline-details-view-row-title
+    color: $grey-lightest
 
 //~~~~ PROFILE ~~~~//
 .panel.profiles
@@ -686,6 +707,14 @@ button.status-bar-item .glyph
       background-image: none
       &:hover
         background: $blue
+
+    &.pane-title-button.refresh
+      -webkit-mask-image: url(Images/paneRefreshButtons.png)
+      background: $white
+      background-image: none
+      &:hover
+        background: $blue
+
 
     &.element-state
       -webkit-mask-image: url(Images/paneElementStateButtons.png)
