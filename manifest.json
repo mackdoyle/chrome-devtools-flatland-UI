@@ -2,7 +2,7 @@
   "name": "DevTools Theme: Flatland",
   "author": "Chase Adams",
   "default_locale": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modified port of the SublimeText Flatland Theme for Chrome DevTools.",
   "homepage_url": "https://github.com/realchaseadams/chrome-devtools-flatland-UI",
   "devtools_page": "devtools.html",

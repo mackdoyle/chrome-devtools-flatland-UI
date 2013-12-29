@@ -15,11 +15,42 @@ module.exports = function(grunt) {
           'styles.css': 'sass/flatland.sass'
         }
       }
+    },
+    bump: {
+     options: {
+       files: ['package.json', 'manifest.json'],
+       updateConfigs: [],
+       commit: true,
+       commitMessage: 'Release v%VERSION%',
+       commitFiles: ['-a'], // '-a' for all files
+       createTag: true,
+       tagName: 'v%VERSION%',
+       tagMessage: 'Version %VERSION%',
+       push: false,
+       pushTo: 'digitalocean',
+       gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
+     }
+   },
+    compress: {
+      main: {
+        options: {
+          archive: 'devtools-flatland.zip'
+        }
+      },
+      files: [
+      {
+        src: ['*.json', 'styles.css', 'devtools.html', 'devtools.js'],
+        dest: 'dist'
+      }
+      ]
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-bump');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('publish', ['bump:patch', 'compress']);
 };
