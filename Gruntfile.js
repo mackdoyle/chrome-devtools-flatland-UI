@@ -34,15 +34,15 @@ module.exports = function(grunt) {
         options: {
           archive: 'devtools-flatland.zip',
           mode: 'zip'
+        },
+        files: [
+        {
+          src: ['*.json', 'styles.css', 'devtools.html', 'devtools.js'],
+          expand: true,
+          dest: 'dist'
         }
-      },
-      files: [
-      {
-        src: ['*.json', 'styles.css', 'devtools.html', 'devtools.js'],
-        expand: true,
-        dest: 'dist'
+        ]
       }
-      ]
     }
   });
 
