@@ -23,9 +23,7 @@ module.exports = function(grunt) {
        commit: true,
        commitMessage: 'Release v%VERSION%',
        commitFiles: ['-a'], // '-a' for all files
-       createTag: true,
-       tagName: 'v%VERSION%',
-       tagMessage: 'Version %VERSION%',
+       createTag: false,
        push: false,
        pushTo: 'digitalocean',
        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
