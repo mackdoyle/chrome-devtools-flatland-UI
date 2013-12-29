@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         },
         files: [
         {
-          src: ['*.json', 'styles.css', 'devtools.html', 'devtools.js'],
+          src: ['_locales', 'icons', '*.json', 'styles.css', 'devtools.html', 'devtools.js'],
           expand: true,
           dest: 'dist'
         }
