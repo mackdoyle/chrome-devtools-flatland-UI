@@ -34,7 +34,8 @@ module.exports = function(grunt) {
     compress: {
       main: {
         options: {
-          archive: 'devtools-flatland.zip'
+          archive: 'devtools-flatland.zip',
+          mode: 'zip'
         }
       },
       files: [
