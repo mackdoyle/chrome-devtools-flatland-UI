@@ -39,8 +39,6 @@ ol.elements-tree-outline .selected {
 
 .webkit-html-tag {
   color: #65a4a4; }
-  .webkit-html-tag span {
-    color: #e0dc6d; }
 
 .webkit-html-tag-name {
   color: #bdda6e; }
@@ -157,6 +155,19 @@ select.status-bar-item {
   select.status-bar-item:empty, select.status-bar-item:empty + .status-bar-select-arrow {
     display: none; }
 
+.console-filters-header {
+  flex-basis: 36px;
+  padding: 5px;
+  background-color: #121316;
+  border-top: 1px solid #4b4f53; }
+  .console-filters-header .filter-bitset-filter li.selected {
+    background: #2195f0;
+    border-radius: 0;
+    color: #121316; }
+
+.search-drawer-header input[type="text"].search-config-search {
+  color: #f4f4f4; }
+
 #console-messages {
   border-top: 1px solid #121316; }
   #console-messages .console-message::before, #console-messages .console-user-command::before,
@@ -193,6 +204,31 @@ select.status-bar-item {
   height: 18px;
   border-left: 1px solid transparent;
   border-bottom: 1px solid #121316; }
+
+#search-results-pane-file-based .search-match .search-match-content {
+  color: #f4f4f4; }
+#search-results-pane-file-based .search-match .highlighted-match {
+  background: #73aabd;
+  padding: 0 3px;
+  color: #121316; }
+#search-results-pane-file-based .search-match:not(:hover) .search-match-line-number {
+  background: #121316;
+  color: #f4f4f4; }
+#search-results-pane-file-based .search-match:hover .search-match-line-number {
+  background: #2195f0;
+  color: #f4f4f4; }
+#search-results-pane-file-based .search-result {
+  padding: 5px 0;
+  background: #121316;
+  border: 1px solid #4b4f53;
+  border-right: none;
+  border-left: none;
+  color: #f4f4f4; }
+  #search-results-pane-file-based .search-result:hover {
+    color: #2195f0;
+    background: #25292c; }
+  #search-results-pane-file-based .search-result .search-result-file-name, #search-results-pane-file-based .search-result .search-result-matches-count {
+    color: #f4f4f4; }
 
 .panel-status-bar {
   flex-basis: 36px;
@@ -333,19 +369,28 @@ select.status-bar-item {
   color: #77797d; }
   .data-grid td a {
     color: #73aabd; }
+.data-grid tr, .data-grid td {
+  color: #f4f4f4;
+  text-decoration: none !important; }
 .data-grid tr:nth-child(odd) {
   background: #121316; }
 .data-grid tr:nth-child(even) {
   background: #25292c; }
 .data-grid tr:hover:not(:last-child) {
-  background: #2195f0; }
+  background: #2195f0;
+  text-decoration: none; }
   .data-grid tr:hover:not(:last-child) td {
     color: #f4f4f4; }
     .data-grid tr:hover:not(:last-child) td a {
       color: #a3def2; }
-.data-grid .data-grid-resizer {
-  width: 1px;
-  background: #4b4f53; }
+  .data-grid tr:hover:not(:last-child) .network-cell-subtitle {
+    color: #f4f4f4; }
+
+.network-cell-subtitle:hover {
+  color: #121316; }
+  .network-cell-subtitle:hover .data-grid-resizer {
+    width: 1px;
+    background: #4b4f53; }
 
 .resources.panel .sidebar li {
   height: 20px;
@@ -609,21 +654,25 @@ button.status-bar-item .glyph {
   color: #a3def2; }
 .CodeMirror .cm-xml-comment {
   color: #77797d; }
-.CodeMirror .cm-js-keyword {
-  color: #e0dc6d; }
-.CodeMirror .cm-js-def {
+.CodeMirror .cm-punctation {
   color: #f29a46; }
-.CodeMirror .cm-js-string {
+.CodeMirror .cm-error {
+  color: #fb5c69; }
+.CodeMirror .cm-js-keyword, .CodeMirror .cm-keyword {
+  color: #e0dc6d; }
+.CodeMirror .cm-js-def, .CodeMirror .cm-variable {
+  color: #f29a46; }
+.CodeMirror .cm-js-string, .CodeMirror .cm-string {
   color: #a3def2; }
-.CodeMirror .cm-js-number {
+.CodeMirror .cm-js-number, .CodeMirror .cm-number {
   color: #dcf080; }
 .CodeMirror .cm-js-string-2 {
   color: #f29a46; }
-.CodeMirror .cm-js-comment {
+.CodeMirror .cm-js-comment, .CodeMirror .cm-comment {
   color: #77797d; }
 .CodeMirror .cm-search-highlight {
   color: #f29a46; }
-.CodeMirror .cm-css-qualifier {
+.CodeMirror .cm-css-qualifier, .CodeMirror .cm-operator {
   color: #2195f0; }
 .CodeMirror .cm-css-tag {
   color: #73aabd; }
@@ -638,7 +687,7 @@ button.status-bar-item .glyph {
 .CodeMirror .cm-css-variable-2 {
   font-style: italic;
   color: #bdda6e; }
-.CodeMirror .cm-css-atom, .CodeMirror .cm-css-keyword {
+.CodeMirror .cm-css-atom, .CodeMirror .cm-css-keyword, .CodeMirror .cm-atom {
   color: #dcf080; }
 .CodeMirror .cm-css-meta {
   color: #fb5c69; }

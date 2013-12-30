@@ -73,9 +73,6 @@ ol.elements-tree-outline .selected
 .webkit-html-tag
   color: $cyan
 
-  span
-    color: $mustard
-
 .webkit-html-tag-name
   color: $green-light
 
@@ -202,6 +199,20 @@ select.status-bar-item
   &:empty, &:empty + .status-bar-select-arrow
     display: none
 
+.console-filters-header
+  flex-basis: 36px
+  padding: 5px
+  background-color: $grey-darkest
+  border-top: 1px solid $grey-light
+
+  .filter-bitset-filter li.selected
+    background: $blue
+    border-radius: 0
+    color: $grey-darkest
+
+.search-drawer-header input[type="text"].search-config-search
+  color: $white
+
 #console-messages
   border-top: 1px solid $grey-darkest
 
@@ -246,6 +257,34 @@ select.status-bar-item
   height: 18px
   border-left: 1px solid transparent
   border-bottom: 1px solid $grey-darkest
+
+#search-results-pane-file-based
+  .search-match
+    .search-match-content
+      color: $white
+    .highlighted-match
+      background: $blue-light
+      padding: 0 3px
+      color: $grey-darkest
+    &:not(:hover) .search-match-line-number
+      background: $grey-darkest
+      color: $white
+    &:hover .search-match-line-number
+      background: $blue
+      color: $white
+
+  .search-result
+    padding: 5px 0
+    background: $grey-darkest
+    border: 1px solid $grey-light
+    border-right: none
+    border-left: none
+    color: $white
+    &:hover
+      color: $blue
+      background: $grey-dark
+    .search-result-file-name, .search-result-matches-count
+      color: $white
 
 //~~~~ NETWORK ~~~~//
 .panel-status-bar
@@ -429,6 +468,10 @@ select.status-bar-item
     a
       color: $blue-light
 
+  tr, td
+    color: $white
+    text-decoration: none !important
+
   tr:nth-child(odd)
     background: $grey-darkest
 
@@ -437,10 +480,16 @@ select.status-bar-item
 
   tr:hover:not(:last-child)
     background: $blue
+    text-decoration: none
     td
       color: $white
       a
         color: $blue-lightest
+    .network-cell-subtitle
+      color: $white
+
+.network-cell-subtitle:hover
+  color: $grey-darkest
 
   .data-grid-resizer
     width: 1px
@@ -756,29 +805,35 @@ button.status-bar-item .glyph
   .cm-xml-comment
     color: $grey-lightest
 
-  // Javascript
-  .cm-js-keyword
-    color: $mustard
-
-  .cm-js-def
+  .cm-punctation
     color: $orange
 
-  .cm-js-string
+  // Javascript & Coffeescript
+  .cm-error
+    color: $red-light
+
+  .cm-js-keyword,  .cm-keyword
+    color: $mustard
+
+  .cm-js-def, .cm-variable
+    color: $orange
+
+  .cm-js-string, .cm-string
     color: $blue-lightest
 
-  .cm-js-number
+  .cm-js-number, .cm-number
     color: $vomit
 
   .cm-js-string-2
     color: $orange
 
-  .cm-js-comment
+  .cm-js-comment, .cm-comment
     color: $grey-lightest
 
   .cm-search-highlight
     color: $orange
 
-  .cm-css-qualifier
+  .cm-css-qualifier, .cm-operator
     color: $blue
 
   .cm-css-tag
@@ -800,7 +855,7 @@ button.status-bar-item .glyph
     font-style: italic
     color: $green-light
 
-  .cm-css-atom, .cm-css-keyword
+  .cm-css-atom, .cm-css-keyword, .cm-atom
     color: $vomit
 
   .cm-css-meta
