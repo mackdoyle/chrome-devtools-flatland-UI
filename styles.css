@@ -149,6 +149,11 @@ span.webkit-html-text-node.bogus {
     #elements-crumbs .crumbs .crumb.selected.start {
       background: #121316; }
 
+.panel.elements .metrics {
+  color: #121316; }
+  .panel.elements .metrics .position:hover {
+    color: #f4f4f4; }
+
 select.status-bar-item {
   color: #a3def2;
   text-shadow: none; }
