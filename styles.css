@@ -315,6 +315,15 @@ select.status-bar-item {
     border: none; }
   .panel.sources .placard .subtitle, .panel.sources .info .subtitle {
     color: #77797d; }
+.panel.sources .watch-expressions li {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  .panel.sources .watch-expressions li.dimmed:hover {
+    background: #4b4f53; }
+    .panel.sources .watch-expressions li.dimmed:hover span {
+      color: #f4f4f4 !important; }
+  .panel.sources .watch-expressions li.parent:hover {
+    background: #121316; }
 
 .cm-execution-line {
   background-color: #121316 !important;

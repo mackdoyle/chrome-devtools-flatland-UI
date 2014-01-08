@@ -196,6 +196,7 @@ span.webkit-html-text-node.bogus
     color: $grey-darkest
     .position:hover
       color: $white
+
 //~~~~ CONSOLE ~~~~//
 // Select Menus in Console
 select.status-bar-item
@@ -395,6 +396,17 @@ select.status-bar-item
 
     .subtitle
       color: $grey-lightest
+
+  .watch-expressions
+    li
+      padding-top: 5px
+      padding-bottom: 5px
+      &.dimmed:hover
+        background: $grey-light
+        span
+          color: $white !important
+      &.parent:hover
+        background:  $grey-darkest
 
 .cm-execution-line
   background-color: $grey-darkest !important
