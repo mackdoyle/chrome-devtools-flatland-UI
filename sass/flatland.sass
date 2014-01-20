@@ -1,5 +1,6 @@
 //~~~~ VARIABLS ~~~~//
-$grey-darkest: #121316
+$black: #121316
+$grey-darkest: #1D1F21
 $grey-dark: #25292C
 $grey: #31353A
 $grey-light: #4B4F53
@@ -15,9 +16,10 @@ $green-light: #BDDA6E
 
 $cyan: #65A4A4
 
+$blue-dark: #1764A0
+$blue: #2195F0
 $blue-lightest: #A3DEF2
 $blue-light: #73AABD
-$blue: #2195F0
 
 $white: #f4f4f4
 
@@ -128,6 +130,12 @@ span.webkit-html-text-node.bogus
 .styles-section
   padding: 5px
   border-bottom: 1px solid $grey-darkest
+
+  &.user-rule.read-only
+    background-color: $grey-lightest
+
+    .header .subtitle
+      color: $grey-darkest
 
 .tabbed-pane-header-tabs-drop-down
   color: $blue
@@ -884,3 +892,40 @@ button.status-bar-item .glyph
   .CodeMirror-matchingbracket
     text-decoration: underline
     color: $white !important
+
+.dialog
+  background-image: none
+  background-color: $grey-darkest
+  border-radius: 5px
+  border: 5px solid $grey
+  box-shadow: $black 0 1px 8px
+
+  input.monospace
+    height: 44px
+    padding: 10px
+    background-color: $grey-dark
+    font-size: 24px !important
+    line-height: 24px
+    outline: none
+
+  .filtered-item-list-dialog
+    > div.container
+      background: $grey-darkest
+      border: none
+      top: 64px
+
+    .filtered-item-list-dialog-item
+      background-color: $grey-darkest
+      padding: 8px 10px
+      border-bottom: 1px solid $grey-dark
+      color: $grey-light
+
+      &.selected
+        background-color: $blue-dark
+        color: $white
+
+        span.highlight
+          color: $grey-darkest
+
+      span.highlight
+        color: $blue
