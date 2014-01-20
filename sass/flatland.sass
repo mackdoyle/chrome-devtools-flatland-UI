@@ -395,8 +395,20 @@ select.status-bar-item
   .sidebar-pane
     padding: 5px 0
 
-  .placard, .info
+    .breakpoints-list-deactivated
+      background: $grey-light
+      opacity: 1
+
+      li
+        padding: 5px
+        color: $grey-darkest
+
+  .placard, .placard + .info
     background: $grey
+    border: none
+
+    .subtitle
+      color: $grey-darkest !important
 
     &.selected
       background: $blue
@@ -419,6 +431,13 @@ select.status-bar-item
 .cm-execution-line
   background-color: $grey-darkest !important
   outline: none !important
+
+.cm-highlight
+  -webkit-animation: none
+  background: $grey-light
+
+.sidebar-pane .breakpoint-hit
+  background: $blue-dark
 
 //~~~~ TIMELINE ~~~~//
 .panel.timeline
@@ -800,6 +819,9 @@ button.status-bar-item .glyph
 
 // Syntax Highlighting
 .CodeMirror
+  pre
+    line-height: 14px
+
   .CodeMirror-linenumber
     padding-left: 0
 

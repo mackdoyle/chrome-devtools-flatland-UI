@@ -312,12 +312,21 @@ select.status-bar-item {
     top: -3px; }
 .panel.sources .sidebar-pane {
   padding: 5px 0; }
-.panel.sources .placard, .panel.sources .info {
-  background: #31353a; }
-  .panel.sources .placard.selected, .panel.sources .info.selected {
+  .panel.sources .sidebar-pane .breakpoints-list-deactivated {
+    background: #4b4f53;
+    opacity: 1; }
+    .panel.sources .sidebar-pane .breakpoints-list-deactivated li {
+      padding: 5px;
+      color: #1d1f21; }
+.panel.sources .placard, .panel.sources .placard + .info {
+  background: #31353a;
+  border: none; }
+  .panel.sources .placard .subtitle, .panel.sources .placard + .info .subtitle {
+    color: #1d1f21 !important; }
+  .panel.sources .placard.selected, .panel.sources .placard + .info.selected {
     background: #2195f0;
     border: none; }
-  .panel.sources .placard .subtitle, .panel.sources .info .subtitle {
+  .panel.sources .placard .subtitle, .panel.sources .placard + .info .subtitle {
     color: #77797d; }
 .panel.sources .watch-expressions li {
   padding-top: 5px;
@@ -332,6 +341,13 @@ select.status-bar-item {
 .cm-execution-line {
   background-color: #1d1f21 !important;
   outline: none !important; }
+
+.cm-highlight {
+  -webkit-animation: none;
+  background: #4b4f53; }
+
+.sidebar-pane .breakpoint-hit {
+  background: #1764a0; }
 
 .panel.timeline .timeline-records-title, .panel.timeline .timeline-records-list {
   background: #25292c;
@@ -652,6 +668,8 @@ button.status-bar-item .glyph {
   .sidebar-pane-toolbar > .pane-title-button.element-state:hover {
     background: #2195f0; }
 
+.CodeMirror pre {
+  line-height: 14px; }
 .CodeMirror .CodeMirror-linenumber {
   padding-left: 0; }
 .CodeMirror .CodeMirror-sizer {
