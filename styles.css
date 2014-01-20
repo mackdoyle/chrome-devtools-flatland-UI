@@ -621,18 +621,27 @@ button.status-bar-item .glyph {
   color: #77797d; }
 
 ::-webkit-scrollbar-track {
-  width: 8px;
-  border-radius: 8px;
+  width: 10px;
+  border-radius: 10px;
   background-color: #31353a; }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: #31353a; }
+  width: 15px;
+  background-color: #31353a;
+  bottom: 0; }
 
 ::-webkit-scrollbar-thumb {
-  width: 8px;
+  width: 15px;
   background-color: #4b4f53;
   border-radius: 6px; }
+
+.CodeMirror-hscrollbar {
+  right: 15px !important; }
+
+.CodeMirror-scrollbar-filler {
+  background-color: #31353a;
+  height: 15px !important;
+  width: 15px !important; }
 
 .properties .name {
   color: #2195f0 !important; }

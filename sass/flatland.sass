@@ -762,18 +762,31 @@ button.status-bar-item .glyph
 
 // Scrollbar Styling
 ::-webkit-scrollbar-track
-  width: 8px
-  border-radius: 8px
+  width: 10px
+  border-radius: 10px
   background-color: $grey
 
 ::-webkit-scrollbar
-  width: 10px
+  width: 15px
   background-color: $grey
+  bottom: 0
 
 ::-webkit-scrollbar-thumb
-  width: 8px
+  width: 15px
   background-color: $grey-light
   border-radius: 6px
+
+.CodeMirror-hscrollbar
+  right: 15px !important
+//   overflow: inherit !important
+
+.CodeMirror-vscrollbar
+  // bottom: 15px !important
+
+.CodeMirror-scrollbar-filler
+  background-color: $grey
+  height: 15px !important
+  width: 15px !important
 
 .properties
   .name
