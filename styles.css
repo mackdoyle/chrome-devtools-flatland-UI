@@ -249,6 +249,8 @@ select.status-bar-item {
   background: #25292c; }
 .network-log-grid.data-grid tr.filler {
   background: #1d1f21; }
+.network-log-grid.data-grid tr.odd:not(.selected) {
+  background-color: #25292c; }
 .network-log-grid.data-grid th, .network-log-grid.data-grid td {
   border: 1px solid #4b4f53 !important; }
 .network-log-grid.data-grid .data-container {
