@@ -390,10 +390,11 @@ select.status-bar-item
   .sidebar-pane-stack#scripts-debug-sidebar-contents, #scripts-sidebar-stack-pane
     top: 29px
 
-  #scripts-debug-toolbar, .sidebar-pane-title
-    height: 30px
+  .scripts-debug-toolbar, .sidebar-pane-title
+    height: 36px
     padding: 5px
-    background: $grey
+    flex: 0 0 30px
+    background: $grey !important
     border-top: 1px solid $grey-darkest
     border-bottom: 1px solid $grey-darkest
     color: $white
@@ -857,7 +858,7 @@ button.status-bar-item .glyph
     background-color: $grey-dark
     color: $grey-light
 
-  .CodeMirror-cursor
+  div.CodeMirror-cursor
     border-left: 1px solid $white
     z-index: 3
 

@@ -309,14 +309,15 @@ select.status-bar-item {
   color: #f4f4f4; }
 .panel.sources .sidebar-pane-stack#scripts-debug-sidebar-contents, .panel.sources #scripts-sidebar-stack-pane {
   top: 29px; }
-.panel.sources #scripts-debug-toolbar, .panel.sources .sidebar-pane-title {
-  height: 30px;
+.panel.sources .scripts-debug-toolbar, .panel.sources .sidebar-pane-title {
+  height: 36px;
   padding: 5px;
-  background: #31353a;
+  flex: 0 0 30px;
+  background: #31353a !important;
   border-top: 1px solid #1d1f21;
   border-bottom: 1px solid #1d1f21;
   color: #f4f4f4; }
-  .panel.sources #scripts-debug-toolbar .status-bar-item, .panel.sources .sidebar-pane-title .status-bar-item {
+  .panel.sources .scripts-debug-toolbar .status-bar-item, .panel.sources .sidebar-pane-title .status-bar-item {
     top: -3px; }
 .panel.sources .sidebar-pane {
   padding: 5px 0; }
@@ -696,7 +697,7 @@ button.status-bar-item .glyph {
 .CodeMirror .CodeMirror-gutter {
   background-color: #25292c;
   color: #4b4f53; }
-.CodeMirror .CodeMirror-cursor {
+.CodeMirror div.CodeMirror-cursor {
   border-left: 1px solid #f4f4f4;
   z-index: 3; }
 .CodeMirror .cm-xml-tag {
