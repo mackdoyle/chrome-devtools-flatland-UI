@@ -303,14 +303,15 @@ select.status-bar-item {
   color: #f4f4f4; }
 .panel.sources .sidebar-pane-stack#scripts-debug-sidebar-contents, .panel.sources #scripts-sidebar-stack-pane {
   top: 29px; }
-.panel.sources #scripts-debug-toolbar, .panel.sources .sidebar-pane-title {
+.panel.sources .scripts-debug-toolbar, .panel.sources .sidebar-pane-title {
   height: 30px;
+  flex: 0 0 30px;
   padding: 5px;
   background: #31353a;
   border-top: 1px solid #1d1f21;
   border-bottom: 1px solid #1d1f21;
   color: #f4f4f4; }
-  .panel.sources #scripts-debug-toolbar .status-bar-item, .panel.sources .sidebar-pane-title .status-bar-item {
+  .panel.sources .scripts-debug-toolbar .status-bar-item, .panel.sources .sidebar-pane-title .status-bar-item {
     top: -3px; }
 .panel.sources .sidebar-pane {
   padding: 5px 0; }

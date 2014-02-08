@@ -1,6 +1,6 @@
 {
   "name": "devtools-flatland",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "chrome-devtools-flatland-UI ===========================",
   "main": "Gruntfile.js",
   "scripts": {
