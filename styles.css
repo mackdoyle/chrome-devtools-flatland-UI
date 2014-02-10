@@ -691,7 +691,7 @@ button.status-bar-item .glyph {
 .CodeMirror .CodeMirror-gutter {
   background-color: #25292c;
   color: #4b4f53; }
-.CodeMirror .CodeMirror-cursor {
+.CodeMirror div.CodeMirror-cursor {
   border-left: 1px solid #f4f4f4;
   z-index: 3; }
 .CodeMirror .cm-xml-tag {
