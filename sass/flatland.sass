@@ -23,6 +23,15 @@ $blue-light: #73AABD
 
 $white: #f4f4f4
 
+
+.properties-tree li.parent::before,
+.section > .header::before
+  opacity: 1
+  -webkit-mask-position: -4px -96px
+  background: none
+  background-color: $blue
+  -webkit-mask-image: url(Images/statusbarButtonGlyphs.png)
+
 //~~~~ TOOLBAR ~~~~//
 body#-blink-dev-tools .toolbar-background
   background: $grey-darkest !important
@@ -388,7 +397,8 @@ select.status-bar-item
     height: 30px
     flex: 0 0 30px
     padding: 5px
-    background: $grey
+    flex: 0 0 30px
+    background: $grey !important
     border-top: 1px solid $grey-darkest
     border-bottom: 1px solid $grey-darkest
     color: $white
