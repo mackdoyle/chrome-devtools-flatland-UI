@@ -9,11 +9,6 @@
   "author": "",
   "license": "BSD",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-sass": "~0.4.1",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-compress": "~0.5.3",
-    "grunt-bump": "0.0.13",
     "gulp-sass": "^0.7.0",
     "gulp": "^3.5.2",
     "gulp-bump": "^0.1.5",
