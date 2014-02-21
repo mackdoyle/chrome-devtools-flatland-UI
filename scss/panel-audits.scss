@@ -1,0 +1,22 @@
+//~~~~ AUDITS ~~~~//
+.panel.audits {
+  .audit-launcher-view .audit-launcher-view-content {
+    background: $grey-dark;
+    color: $white;
+  }
+  .sidebar-tree-section {
+    padding: 5px;
+    color: $grey-lightest;
+    text-shadow: none;
+  }
+  .audit-launcher-view div.button-container > button {
+    background: $blue;
+    border: none;
+    border-radius: 3px;
+    color: $white;
+    body.inactive & {
+      background: $grey-lightest;
+      color: $grey;
+    }
+  }
+}

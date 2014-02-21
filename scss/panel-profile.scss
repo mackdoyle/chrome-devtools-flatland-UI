@@ -1,0 +1,70 @@
+
+//~~~~ PROFILE ~~~~//
+.panel.profiles {
+  .panel-enabler-view, .profiles-sidebar-tree-box {
+    background: $grey-dark;
+    color: $white;
+  }
+  .panel-enabler-view button:not(.status-bar-item) {
+    background: $blue;
+    border: none;
+    border-radius: 3px;
+    color: $white;
+    body.inactive & {
+      background: $grey-lightest;
+      color: $grey;
+    }
+  }
+}
+
+.data-grid {
+  table.data {
+    background: none;
+  }
+  .data-container {
+    top: 25px;
+  }
+  th {
+    padding: 5px;
+    background: $grey-dark !important;
+    border-bottom-color: $blue !important;
+  }
+  td {
+    padding: 5px;
+    color: $grey-lightest;
+    a {
+      color: $blue-light;
+    }
+  }
+  tr, td {
+    color: $white;
+    text-decoration: none !important;
+  }
+  tr:nth-child(odd) {
+    background: $grey-darkest;
+  }
+  tr:nth-child(even) {
+    background: $grey-dark;
+  }
+  tr:hover:not(:last-child) {
+    background: $blue;
+    text-decoration: none;
+    td {
+      color: $white;
+      a {
+        color: $blue-lightest;
+      }
+    }
+    .network-cell-subtitle {
+      color: $white;
+    }
+  }
+}
+
+.network-cell-subtitle:hover {
+  color: $grey-darkest;
+  .data-grid-resizer {
+    width: 1px;
+    background: $grey-light;
+  }
+}

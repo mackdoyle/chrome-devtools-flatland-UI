@@ -1,0 +1,52 @@
+//~~~~ NETWORK ~~~~//
+.panel-status-bar {
+  flex-basis: 36px;
+  padding: 5px;
+  border-bottom: 1px solid $grey-darkest;
+}
+
+.network-log-grid.data-grid {
+  th, th.sort-descending,
+  th.sort-ascending {
+    background: $grey-dark;
+  }
+
+  tr.filler {
+    background: $grey-darkest !important;
+  }
+
+  tr.odd:not(.selected) {
+    background-color: $grey-dark;
+  }
+
+  th, td {
+    border: 1px solid $grey-light !important;
+  }
+
+  .data-container {
+    top: 37px;
+  }
+}
+
+.panel.network {
+  .data-grid th {
+    background: $grey-dark;
+  }
+  .tabbed-pane-header .tabbed-pane-header-tab {
+    font-size: 10px;
+    padding-top: 7px;
+  }
+}
+
+.network-summary-bar {
+  flex-basis: 30px;
+  padding: 5px;
+  background: $grey-dark;
+  border-top: 1px solid $grey-light;
+  color: $white;
+}
+
+#network-views .network-item-view .tabbed-pane-header {
+  flex-basis: 30px;
+  padding-top: 0;
+}

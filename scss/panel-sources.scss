@@ -1,0 +1,112 @@
+//~~~~ SOURCES ~~~~//
+.panel.sources {
+  .sidebar-overlay {
+    box-shadow: none;
+  }
+  // Right sidebar
+  .split-view-contents-first {
+    .tabbed-pane-header {
+      flex-basis: 24px;
+      .tabbed-pane-header-tab {
+        padding: 4px;
+        font-size: 10px;
+        .close-button-gray {
+          background-color: $grey-lightest;
+          top: 3px;
+          left: 4px;
+          &:hover {
+            background-color: $white;
+            background-position: -175px -96px;
+          }
+        }
+      }
+    }
+    .navigator li {
+      height: 20px;
+      font-size: 10px;
+      color: $grey-lightest;
+      &.selected {
+        padding-top: 2px;
+        background: $blue;
+        color: $white;
+      }
+    }
+  }
+  #sources-panel-sources-view .sources-status-bar {
+    flex-basis: 30px;
+    padding: 5px;
+    background: $grey-dark;
+    border-top: 1px solid $grey-light;
+    color: $white;
+  }
+  .sidebar-pane-stack#scripts-debug-sidebar-contents, #scripts-sidebar-stack-pane {
+    top: 29px;
+  }
+  #scripts-debug-toolbar, .scripts-debug-toolbar, .sidebar-pane-title {
+    height: 30px;
+    flex: 0 0 30px;
+    padding: 5px;
+    flex: 0 0 30px;
+    background: $grey !important;
+    border-top: 1px solid $grey-darkest;
+    border-bottom: 1px solid $grey-darkest;
+    color: $white;
+    .status-bar-item {
+      top: -3px;
+    }
+  }
+  .sidebar-pane {
+    padding: 5px 0;
+    .breakpoints-list-deactivated {
+      background: $grey-light;
+      opacity: 1;
+      li {
+        padding: 5px;
+        color: $grey-darkest;
+      }
+    }
+  }
+  .placard, .placard + .info {
+    background: $grey;
+    border: none;
+    .subtitle {
+      color: $grey-darkest !important;
+    }
+    &.selected {
+      background: $blue;
+      border: none;
+    }
+    .subtitle {
+      color: $grey-lightest;
+    }
+  }
+  .watch-expressions {
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &.dimmed:hover {
+        background: $grey-light;
+        span {
+          color: $white !important;
+        }
+      }
+      &.parent:hover {
+        background: $grey-darkest;
+      }
+    }
+  }
+}
+
+.cm-execution-line {
+  background-color: $grey-darkest !important;
+  outline: none !important;
+}
+
+.cm-highlight {
+  -webkit-animation: none;
+  background: $grey-light;
+}
+
+.sidebar-pane .breakpoint-hit {
+  background: $blue-dark;
+}

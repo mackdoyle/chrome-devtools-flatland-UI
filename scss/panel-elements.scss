@@ -1,0 +1,180 @@
+@import "variables";
+
+//~~~~ INSPECTOR MAIN ~~~~//
+ol.elements-tree-outline .selected {
+  background: $grey;
+  .selection {
+    background: $grey !important;
+  }
+}
+
+.webkit-html-tag-name,
+.styles-section .simple-selector.selector-matches, .styles-section .selector {
+  color: $green-light;
+}
+
+.webkit-html-tag {
+  color: $cyan;
+}
+
+.webkit-html-tag-name {
+  color: $green-light;
+}
+
+.webkit-html-attribute-name {
+  color: $mustard;
+}
+
+.webkit-html-attribute-value {
+  color: $blue-lightest;
+}
+
+span.webkit-html-text-node.bogus {
+  color: $blue;
+}
+
+.webkit-html-pseudo-element {
+  color: $red-light;
+}
+
+.webkit-html-comment {
+  color: $grey-lightest;
+}
+
+.webkit-css-property {
+  color: $blue-light;
+}
+
+.metrics-and-styles .properties .value {
+  color: $orange;
+}
+
+.inspector-footer.status-bar {
+  padding: 5px;
+  background-color: $grey-darkest;
+  border-top: 1px solid $grey-light;
+  .toolbar-search-control {
+    background-color: $grey-light;
+    border: none;
+  }
+  .toolbar-search button {
+    padding: 3px;
+    background: $grey;
+    color: $white;
+    border-radius: 0;
+    border: none;
+    font-size: 10px;
+  }
+}
+
+.split-view.hbox > .split-view-resizer {
+  width: 3px;
+  background: $grey-darkest;
+}
+
+//~~~~ INSPECTOR SIDEBAR ~~~~//
+.sidebar-separator {
+  padding: 5px;
+  background: $grey;
+  border-bottom: 1px solid $grey-darkest;
+  color: $white;
+}
+
+.styles-section {
+  padding: 5px;
+  border-bottom: 1px solid $grey-darkest;
+  &.user-rule.read-only {
+    background-color: $grey-lightest;
+    .header .subtitle {
+      color: $grey-darkest;
+    }
+  }
+}
+
+.tabbed-pane-header-tabs-drop-down {
+  color: $blue;
+}
+
+.styles-element-state-pane {
+  padding: 10px;
+  background: $grey-dark;
+  border-bottom: 1px solid $grey-light !important;
+}
+
+.sidebar-tabbed-pane {
+  .tabbed-pane-header {
+    flex-basis: 24px;
+    font-size: 10px;
+    .tabbed-pane-header-tab {
+      padding: 4px 1px;
+    }
+  }
+}
+
+.events-pane {
+  .section {
+    padding: 5px;
+    &:not(:nth-of-type(1)) {
+      border-top: 1px solid $grey-darkest;
+    }
+  }
+  .name {
+    color: $white;
+  }
+}
+
+.console-formatted-function {
+  color: $mustard;
+}
+
+.console-formatted-string {
+  color: $blue-lightest;
+}
+
+.console-formatted-boolean {
+  color: $green-light;
+}
+
+.console-formatted-number {
+  font-weight: bold;
+  color: $green-light;
+}
+
+.console-formatted-array {
+  color: $blue;
+}
+
+.console-formatted-object {
+  color: $orange;
+}
+
+//~~~~ BREADCRUMBS ~~~~//
+#elements-crumbs {
+  flex-basis: 24px;
+  background: $grey-dark;
+  color: $grey-lightest;
+  border-top: 1px solid $grey-darkest;
+  border-bottom: 1px solid $grey-darkest;
+  .crumbs .crumb {
+    height: 24px;
+    padding-top: 2px;
+    border-right: 1px solid $grey-darkest;
+    &:hover {
+      background: $grey;
+      color: $white;
+    }
+    &.selected.start {
+      background: $grey-darkest;
+    }
+  }
+}
+
+//~~~~ ELEMENTS ~~~~//
+.panel.elements {
+  .metrics {
+    color: $grey-darkest;
+    .position:hover {
+      color: $white;
+    }
+  }
+}

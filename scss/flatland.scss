@@ -1,0 +1,397 @@
+@import "variables";
+@import "toolbars";
+@import "panel-elements";
+@import "console";
+@import "panel-network";
+@import "panel-sources";
+@import "panel-profile";
+@import "panel-timeline";
+@import "panel-resources";
+@import "panel-audits";
+@import "settings";
+
+.properties-tree li.parent::before,
+.section > .header::before {
+  opacity: 1;
+  -webkit-mask-position: -4px -96px;
+  background: none;
+  background-color: $blue;
+  -webkit-mask-image: url(Images/statusbarButtonGlyphs.png);
+}
+
+//~~~~ GLOBAL ELEMENTS ~~~~//
+#console-messages,
+.console-view-wrapper,
+#console-view,
+.CodeMirror-scroll,
+.drawer .revision-history-drawer,
+.dialog .fill, .panel,
+.console-status-bar,
+.help-window-main,
+.tabbed-pane-content,
+.tabbed-pane-content.has-no-tabs,
+.sidebar-overlay,
+.styles-section.read-only,
+.split-view-vertical .sidebar-pane.composite .properties-tree,
+.panel:not(.elements),
+.panel:not(.extension-panel),
+#network-views .CodeMirror-lines,
+#script-view-fallback,
+.panel-status-bar,
+.sidebar, body.inactive .sidebar {
+  color: $white;
+  background: $grey-dark;
+}
+
+.tabbed-pane-header {
+  flex-basis: 36px;
+  color: $white !important;
+  background: $grey-darkest !important;
+  border-bottom: 1px solid $grey-dark !important;
+  .tabbed-pane-header-tab {
+    box-sizing: initial;
+    text-align: center;
+    padding: 9px 4px;
+    height: 28px;
+    margin: 0;
+    background: $grey !important;
+    color: $grey-lightest;
+    border-right: 1px solid $grey-darkest;
+    &.selected {
+      background: $grey-light !important;
+      color: $white;
+      -webkit-border-image: none;
+      border: none;
+      border-right: 1px solid $grey-darkest;
+      border-left: 1px solid transparent;
+    }
+  }
+}
+
+.overrides-view input[type=text], .overrides-view select,
+input, input[type="password"], input[type="text"],
+input[type="search"], isindex, .search-replace,
+.settings-tab input:not([type]), .settings-tab input[type="text"] {
+  padding: 5px 8px;
+  background-color: $grey-light;
+  border: 1px solid $grey-darkest;
+  color: $white;
+}
+
+.overrides-activate-device #tab-device,
+.overrides-activate-viewport #tab-viewport,
+.overrides-activate-user-agent #tab-user-agent,
+.overrides-activate-sensors #tab-sensors {
+  color: $blue-lightest;
+}
+
+.overrides-view .overrides-footer {
+  padding: 5px;
+  background: $grey-dark;
+  border-top: 1px solid $grey-light;
+  color: $white;
+}
+
+button.overrides-swap {
+  background: $blue;
+  border: none;
+  margin: 5px 10px;
+  color: darken($blue, 50%);
+}
+
+.status-bar {
+  background: $grey-dark;
+  border-top: 1px solid $grey-light;
+  color: $white;
+}
+
+.settings-tab-text-button {
+  margin: 0 5px;
+  background: $blue;
+  border: 0 !important;
+  border-radius: 2px;
+  box-shadow: none;
+  text-shadow: none;
+  color: $white;
+  &:not(:disabled):hover {
+    background: darken($blue, 20%);
+    box-shadow: none;
+    color: $white;
+  }
+}
+
+a {
+  color: $green-light !important;
+  &:hover {
+    color: darken($green-light, 20%) !important;
+  }
+}
+
+// GLYPHS
+
+button.status-bar-item .glyph.shadow, .glyph.shadow {
+  background-color: none;
+}
+
+.glyph {
+  top: 0;
+}
+
+/*-- GLYPHS -- */
+button.status-bar-item .glyph {
+  background-color: $grey-lightest;
+}
+
+.search-drawer-header label.search-config-label {
+  color: $grey-lightest;
+}
+
+button.scripts-step-over .glyph,
+button.scripts-step-into .glyph,
+button.scripts-step-out .glyph,
+.filters-toggle.toggled-active .glyph,
+button.status-bar-item.toggled-on .glyph,
+button.status-bar-item.toggled-on .glyph:not(.shadow),
+button.clear-status-bar-item:active .glyph,
+button.garbage-collect-status-bar-item:active .glyph,
+button.glue-async-status-bar-item:active .glyph,
+.filters-toggle.toggled-shown .glyph {
+  background-color: $blue;
+}
+
+button.status-bar-item.toggled-on .glyph:not(.shadow) {
+  background-color: $blue !important;
+}
+
+button.status-bar-item .glyph {
+  left: -3px;
+}
+
+.long-click-glyph {
+  color: $grey-lightest;
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar-track {
+  width: 10px;
+  border-radius: 10px;
+  background-color: $grey;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: $grey;
+  bottom: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 15px;
+  background-color: $grey-light;
+  border-radius: 6px;
+}
+
+.CodeMirror-hscrollbar {
+  right: 15px !important;
+}
+
+//   overflow: inherit !important
+
+.CodeMirror-vscrollbar {
+  // bottom: 15px !important
+}
+
+.CodeMirror-scrollbar-filler {
+  background-color: $grey;
+  height: 15px !important;
+  width: 15px !important;
+}
+
+.properties {
+  .name {
+    color: $blue !important;
+    &.dimmed {
+      color: $blue-lightest;
+    }
+  }
+}
+
+.sidebar-pane-toolbar {
+  .panel.elements & > select.select-settings {
+    -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneSettingsButtons.png);
+    background: $white;
+    &:hover {
+      background: $blue;
+    }
+  }
+  .panel.elements & > select.select-filter {
+    -webkit-mask-image: url(Images/paneFilterButtons.png);
+    background: $white;
+    &:hover {
+      background: $blue;
+    }
+  }
+  & > .pane-title-button {
+    &.add {
+      -webkit-mask-image: url(Images/paneAddButtons.png);
+      background: $white;
+      background-image: none;
+      &:hover {
+        background: $blue;
+      }
+    }
+    &.pane-title-button.refresh {
+      -webkit-mask-image: url(Images/paneRefreshButtons.png);
+      background: $white;
+      background-image: none;
+      &:hover {
+        background: $blue;
+      }
+    }
+    &.element-state {
+      -webkit-mask-image: url(Images/paneElementStateButtons.png);
+      background: $white;
+      background-image: none;
+      &:hover {
+        background: $blue;
+      }
+    }
+  }
+}
+
+// Syntax Highlighting
+.CodeMirror {
+  pre {
+    line-height: 14px;
+  }
+  .CodeMirror-linenumber {
+    padding-left: 0;
+  }
+  .CodeMirror-sizer {
+    margin-left: 40px;
+  }
+  .CodeMirror-gutters {
+    border-right: 1px solid $grey-darkest;
+  }
+  .CodeMirror-gutter {
+    background-color: $grey-dark;
+    color: $grey-light;
+  }
+  div.CodeMirror-cursor {
+    border-left: 1px solid $white;
+    z-index: 3;
+  }
+  // Source Syntax Highlighting
+  // HTML/XML
+  .cm-xml-tag {
+    color: $vomit;
+  }
+  .cm-xml-attribute {
+    color: $mustard;
+  }
+  .cm-xml-string {
+    color: $blue-lightest;
+  }
+  .cm-xml-comment {
+    color: $grey-lightest;
+  }
+  .cm-punctation {
+    color: $orange;
+  }
+  // Javascript & Coffeescript
+  .cm-error {
+    color: $red-light;
+  }
+  .cm-js-keyword,  .cm-keyword {
+    color: $mustard;
+  }
+  .cm-js-def, .cm-variable {
+    color: $orange;
+  }
+  .cm-js-string, .cm-string {
+    color: $blue-lightest;
+  }
+  .cm-js-number, .cm-number {
+    color: $vomit;
+  }
+  .cm-js-string-2 {
+    color: $orange;
+  }
+  .cm-js-comment, .cm-comment {
+    color: $grey-lightest;
+  }
+  .cm-search-highlight {
+    color: $orange;
+  }
+  .cm-css-qualifier, .cm-operator {
+    color: $blue;
+  }
+  .cm-css-tag {
+    color: $blue-light;
+  }
+  .cm-css-operator {
+    color: $mustard;
+  }
+  .cm-css-property {
+    color: $blue-light;
+  }
+  .cm-css-string, .cm-css-string-2 {
+    color: $orange;
+  }
+  .cm-css-number {
+    color: $vomit;
+  }
+  .cm-css-variable-2 {
+    font-style: italic;
+    color: $green-light;
+  }
+  .cm-css-atom, .cm-css-keyword, .cm-atom {
+    color: $vomit;
+  }
+  .cm-css-meta {
+    color: $red-light;
+  }
+  //Editing
+  .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: $white !important;
+  }
+}
+
+.dialog {
+  background-image: none;
+  background-color: $grey-darkest;
+  border-radius: 5px;
+  border: 5px solid $grey;
+  box-shadow: $black 0 1px 8px;
+  input.monospace {
+    height: 44px;
+    padding: 10px;
+    background-color: $grey-dark;
+    font-size: 24px !important;
+    line-height: 24px;
+    outline: none;
+  }
+  .filtered-item-list-dialog {
+    > div.container {
+      background: $grey-darkest;
+      border: none;
+      top: 64px;
+    }
+    .filtered-item-list-dialog-item {
+      background-color: $grey-darkest;
+      padding: 8px 10px;
+      border-bottom: 1px solid $grey-dark;
+      color: $grey-light;
+      &.selected {
+        background-color: $blue-dark;
+        color: $white;
+        span.highlight {
+          color: $grey-darkest;
+        }
+      }
+      span.highlight {
+        color: $blue;
+      }
+    }
+  }
+}

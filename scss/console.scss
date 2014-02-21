@@ -1,0 +1,111 @@
+//~~~~ CONSOLE ~~~~//
+// Select Menus in Console
+select.status-bar-item {
+  color: $blue-lightest;
+  text-shadow: none;
+  &:empty, &:empty + .status-bar-select-arrow {
+    display: none;
+  }
+}
+
+.console-filters-header {
+  flex-basis: 36px;
+  padding: 5px;
+  background-color: $grey-darkest;
+  border-top: 1px solid $grey-light;
+  .filter-bitset-filter li.selected {
+    background: $blue;
+    border-radius: 0;
+    color: $grey-darkest;
+  }
+}
+
+.search-drawer-header input[type="text"].search-config-search {
+  color: $white;
+}
+
+#console-messages {
+  border-top: 1px solid $grey-darkest;
+  .console-message::before, .console-user-command::before,
+  #console-prompt::before, .console-group-title::before,
+  .console-error-level::before {
+    top: 1.1em;
+  }
+  .console-group-messages .section > .header .title {
+    color: $white;
+  }
+  .section .properties .name, .event-properties .name, .console-formatted-object .name {
+    color: $blue-light !important;
+    &.dimmed {
+      color: $blue-lightest;
+    }
+  }
+  .console-formatted-object {
+    color: $orange;
+  }
+  a {
+    color: $green-light;
+    &:hover {
+      color: darken($green-light, 20%);
+    }
+  }
+  .console-error-level .console-message-text,
+  .console-error-level .section > .header .title {
+    color: $red-light !important;
+  }
+  .console-message, .console-user-command, #console-prompt {
+    padding: 5px 0;
+    color: $blue-lightest;
+    border-bottom: 1px solid $grey;
+  }
+  .console-debug-level .console-message-text {
+    color: $blue;
+  }
+}
+
+.search-status-bar-summary {
+  border-top: 1px solid $grey-light;
+  background: $grey-darkest;
+}
+
+#drawer-contents .tabbed-pane-header .tabbed-pane-header-tab {
+  height: 18px;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid $grey-darkest;
+}
+
+#search-results-pane-file-based {
+  .search-match {
+    .search-match-content {
+      color: $white;
+    }
+    .highlighted-match {
+      background: $blue-light;
+      padding: 0 3px;
+      color: $grey-darkest;
+    }
+    &:not(:hover) .search-match-line-number {
+      background: $grey-darkest;
+      color: $white;
+    }
+    &:hover .search-match-line-number {
+      background: $blue;
+      color: $white;
+    }
+  }
+  .search-result {
+    padding: 5px 0;
+    background: $grey-darkest;
+    border: 1px solid $grey-light;
+    border-right: none;
+    border-left: none;
+    color: $white;
+    &:hover {
+      color: $blue;
+      background: $grey-dark;
+    }
+    .search-result-file-name, .search-result-matches-count {
+      color: $white;
+    }
+  }
+}
