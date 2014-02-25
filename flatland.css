@@ -94,7 +94,7 @@ span.webkit-html-text-node.bogus {
   .styles-section.user-rule.read-only {
     background-color: #77797d; }
     .styles-section.user-rule.read-only .header .subtitle {
-      color: #1d1f21; }
+      color: #a3def2; }
 
 .tabbed-pane-header-tabs-drop-down {
   color: #2195f0; }
@@ -234,6 +234,13 @@ select.status-bar-item {
     background: #25292c; }
   #search-results-pane-file-based .search-result .search-result-file-name, #search-results-pane-file-based .search-result .search-result-matches-count {
     color: #f4f4f4; }
+
+.highlight {
+  color: #e0dc6d; }
+
+.object-info-state-note {
+  background-color: #2195f0;
+  color: #1d1f21; }
 
 .panel-status-bar {
   flex-basis: 36px;
