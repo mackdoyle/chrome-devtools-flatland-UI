@@ -6,7 +6,9 @@ var bump = require('gulp-bump');
 var zip = require('gulp-zip');
 
 gulp.task('default', ['watch']);
-gulp.task('publish', ['bump', 'compress']);
+gulp.task('pubmajor', ['bump', 'compress']);
+gulp.task('pubminor', ['bump', 'compress']);
+gulp.task('pub', ['bump', 'compress']);
 
 gulp.task('sass', function() {
   gulp.src('./scss/flatland.scss')
@@ -25,8 +27,13 @@ gulp.task('major', function() {
 });
 
 gulp.task('bump', function() {
+  console.log();
+  var task = gulp.env._[0];
+  var type = task === 'pubmajor' ?
+    'major' : task === 'pubminor' ?
+    'minor' : 'patch';
   gulp.src('./*.json')
-    .pipe(bump({ type: 'minor' }))
+    .pipe(bump({ type: type }))
     .pipe(gulp.dest('./'));
 });
 
