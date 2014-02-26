@@ -27,6 +27,8 @@ body#-blink-dev-tools .toolbar-background {
     .toolbar-controls-right .toolbar button.status-bar-item {
       margin: 3px;
       margin-left: 0; }
+  .toolbar .toolbar-controls-right #error-warning-count:hover {
+    border-bottom: none; }
 
 ol.elements-tree-outline .selected {
   background: #31353a; }

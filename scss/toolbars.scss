@@ -37,4 +37,7 @@ body#-blink-dev-tools .toolbar-background {
       margin-left: 0;
     }
   }
+  .toolbar-controls-right #error-warning-count:hover {
+    border-bottom: none;
+  }
 }
