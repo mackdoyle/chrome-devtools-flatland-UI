@@ -716,8 +716,11 @@ button.status-bar-item .glyph {
 .CodeMirror .cm-css-meta {
   color: #fb5c69; }
 .CodeMirror .CodeMirror-matchingbracket {
-  text-decoration: underline;
-  color: #f4f4f4 !important; }
+  background-color: #1d1f21;
+  text-decoration: none;
+  color: #2195f0 !important; }
+.CodeMirror .CodeMirror-nonmatchingbracket {
+  color: #fb5c69 !important; }
 
 .dialog {
   background-image: none;

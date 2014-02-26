@@ -352,8 +352,12 @@ button.status-bar-item .glyph {
   }
   //Editing
   .CodeMirror-matchingbracket {
-    text-decoration: underline;
-    color: $white !important;
+    background-color: $grey-darkest;
+    text-decoration: none;
+    color: $blue !important;
+  }
+  .CodeMirror-nonmatchingbracket {
+    color: $red-light !important;
   }
 }
 
