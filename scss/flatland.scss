@@ -260,6 +260,10 @@ button.status-bar-item .glyph {
 
 // Syntax Highlighting
 .CodeMirror {
+  .CodeMirror-selected {
+    background-color: $grey-darkest;
+  }
+
   pre {
     line-height: 14px;
   }

@@ -282,12 +282,17 @@ select.status-bar-item {
 .panel.sources .split-view-contents-first .tabbed-pane-header {
   flex-basis: 24px; }
   .panel.sources .split-view-contents-first .tabbed-pane-header .tabbed-pane-header-tab {
+    position: relative;
     padding: 4px;
     font-size: 10px; }
+    .panel.sources .split-view-contents-first .tabbed-pane-header .tabbed-pane-header-tab .tabbed-pane-header-tab-title {
+      margin-right: 15px; }
     .panel.sources .split-view-contents-first .tabbed-pane-header .tabbed-pane-header-tab .close-button-gray {
+      position: absolute;
       background-color: #77797d;
-      top: 3px;
-      left: 4px; }
+      top: 8px;
+      left: inherit;
+      right: 5px; }
       .panel.sources .split-view-contents-first .tabbed-pane-header .tabbed-pane-header-tab .close-button-gray:hover {
         background-color: #f4f4f4;
         background-position: -175px -96px; }
@@ -656,6 +661,8 @@ button.status-bar-item .glyph {
   .sidebar-pane-toolbar > .pane-title-button.element-state:hover {
     background: #2195f0; }
 
+.CodeMirror .CodeMirror-selected {
+  background-color: #1d1f21; }
 .CodeMirror pre {
   line-height: 14px; }
 .CodeMirror .CodeMirror-linenumber {
