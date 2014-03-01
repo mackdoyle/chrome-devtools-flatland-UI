@@ -118,3 +118,36 @@ select.status-bar-item {
   background-color: $blue;
   color: $grey-darkest;
 }
+
+.prefix {
+  font-weight: bold;
+  color:#fff;
+}
+
+.suggest-box {
+  margin-top: 5px;
+  background: $grey-darkest !important;
+  color:$grey-lightest !important;
+  border: 5px solid $grey-dark;
+  border-top: none;
+  border-radius: 0 !important;
+  box-shadow: 1px 1px 10px $grey-darkest !important;
+
+  &.generic-suggest {
+    border-color: #4f4f4f !important;
+  }
+
+  .suggest-box-content-item {
+    padding: 5px;
+    &.selected {
+      background-color: $blue !important;
+      color: $black;
+      font-weight: bold;
+    }
+
+    &:hover:not(.selected) {
+      background-color: $grey-darkest !important;
+      border: 1px solid transparent !important;
+    }
+  }
+}

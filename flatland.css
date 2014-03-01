@@ -244,6 +244,30 @@ select.status-bar-item {
   background-color: #2195f0;
   color: #1d1f21; }
 
+.prefix {
+  font-weight: bold;
+  color: #fff; }
+
+.suggest-box {
+  margin-top: 5px;
+  background: #1d1f21 !important;
+  color: #77797d !important;
+  border: 5px solid #25292c;
+  border-top: none;
+  border-radius: 0 !important;
+  box-shadow: 1px 1px 10px #1d1f21 !important; }
+  .suggest-box.generic-suggest {
+    border-color: #4f4f4f !important; }
+  .suggest-box .suggest-box-content-item {
+    padding: 5px; }
+    .suggest-box .suggest-box-content-item.selected {
+      background-color: #2195f0 !important;
+      color: #121316;
+      font-weight: bold; }
+    .suggest-box .suggest-box-content-item:hover:not(.selected) {
+      background-color: #1d1f21 !important;
+      border: 1px solid transparent !important; }
+
 .panel-status-bar {
   flex-basis: 36px;
   padding: 5px;
@@ -605,30 +629,6 @@ button.status-bar-item .glyph {
 
 .long-click-glyph {
   color: #77797d; }
-
-::-webkit-scrollbar-track {
-  width: 10px;
-  border-radius: 10px;
-  background-color: #31353a; }
-
-::-webkit-scrollbar {
-  width: 15px;
-  background-color: #31353a;
-  bottom: 0; }
-
-::-webkit-scrollbar-thumb {
-  width: 15px;
-  background-color: #4b4f53;
-  border-radius: 6px; }
-
-.CodeMirror-hscrollbar {
-  right: 15px !important; }
-
-
-.CodeMirror-scrollbar-filler {
-  background-color: #31353a;
-  height: 15px !important;
-  width: 15px !important; }
 
 .section .properties .name {
   color: #2195f0 !important; }
