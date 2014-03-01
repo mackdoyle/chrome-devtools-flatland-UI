@@ -178,3 +178,16 @@ span.webkit-html-text-node.bogus {
     }
   }
 }
+
+.event-bars .event-bar .header {
+  &::before {
+    opacity: 1;
+    -webkit-mask-position: -4px -96px;
+    background: none;
+    background-color: $grey-lightest;
+    -webkit-mask-image: url(Images/statusbarButtonGlyphs.png);
+  }
+  .title {
+    text-shadow: none;
+  }
+}

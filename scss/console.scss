@@ -126,19 +126,28 @@ select.status-bar-item {
 
 .suggest-box {
   margin-top: 5px;
+  margin-bottom: -5px;
   background: $grey-darkest !important;
   color:$grey-lightest !important;
   border: 5px solid $grey-dark;
   border-top: none;
   border-radius: 0 !important;
   box-shadow: 1px 1px 10px $grey-darkest !important;
-
+  &.above-anchor {
+    margin-top: -5px;
+    border-bottom: none;
+    border-top: 5px solid $grey-dark;
+  }
   &.generic-suggest {
     border-color: #4f4f4f !important;
   }
 
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+
   .suggest-box-content-item {
-    padding: 5px;
+    padding: 2px;
     &.selected {
       background-color: $blue !important;
       color: $black;
