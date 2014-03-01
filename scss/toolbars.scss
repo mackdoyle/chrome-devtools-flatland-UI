@@ -8,20 +8,25 @@ body#-blink-dev-tools .toolbar-background {
 .toolbar {
   flex: 0 0 28px;
   background: $grey-darkest !important;
-  border-bottom: 1px solid $grey-dark;
 
   .toolbar-controls-left {
     opacity: 1;
     padding-top: 0;
     background: $grey-darkest;
+
     .node-search-status-bar-item .glyph {
-      -webkit-mask-position: -226px -24px;
+      -webkit-mask-position: -225px -24px;
     }
-    button.status-bar-item.toggled-on {
-      background: $blue !important;
-      .glyph {
-        background-color: $white !important;
-        opacity: 100%;
+    button.status-bar-item {
+      width: 30px !important;
+      border-right: 3px solid lighten($grey-darkest, 20%);
+      &.toggled-on {
+        background: $blue !important;
+        border-right: 3px solid darken($blue, 20%);
+        .glyph {
+          background-color: $white !important;
+          opacity: 100%;
+        }
       }
     }
   }
@@ -51,7 +56,7 @@ body#-blink-dev-tools .toolbar-background {
   .toolbar-controls-right {
     background: $grey-darkest;
     #error-warning-count {
-      padding: 0 9px;
+      padding: 5px 9px;
       color: $white;
     }
   }
@@ -59,7 +64,7 @@ body#-blink-dev-tools .toolbar-background {
   button.status-bar-item {
     margin: 0;
     width: 26px;
-    height: 27px;
+    height: 30px;
     .glyph {
       background-color: $grey-light !important;
     }

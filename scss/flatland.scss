@@ -68,6 +68,10 @@
   }
 }
 
+.tabbed-pane-content > .panel {
+  border-top: 5px solid $black;
+}
+
 .overrides-view input[type=text], .overrides-view select,
 input, input[type="password"], input[type="text"],
 input[type="search"], isindex, .search-replace,
@@ -260,6 +264,18 @@ button.status-bar-item .glyph {
 }
 
 // Syntax Highlighting
+.cm-breakpoint .CodeMirror-linenumber {
+  margin-left: 0 !important;
+  background-color: $blue-light;
+  border: none !important;
+  color: $black !important;
+}
+
+.cm-breakpoint.cm-execution-line .CodeMirror-linenumber {
+  background-color: $blue;
+  color: $white !important;
+}
+
 .CodeMirror {
   .CodeMirror-selected {
     background-color: $grey-darkest;
@@ -270,16 +286,16 @@ button.status-bar-item .glyph {
   }
   .CodeMirror-linenumber {
     padding-left: 0;
+    color: $grey-light;
   }
   .CodeMirror-sizer {
     margin-left: 40px;
   }
   .CodeMirror-gutters {
-    border-right: 1px solid $grey-darkest;
+    border-right: none;
   }
   .CodeMirror-gutter {
     background-color: $grey-dark;
-    color: $grey-light;
   }
   div.CodeMirror-cursor {
     border-left: 1px solid $white;
@@ -407,23 +423,58 @@ button.status-bar-item .glyph {
 
 // Popover helper in popoverHelper.html for quicker styling, since it's really hard to get it to stay during development
 
+.CodeMirror .CodeMirror-persist-highlight {
+  background-color: $blue;
+  border: $blue-dark 1px solid;
+  color: $black;
+}
+
 .popover {
   -webkit-border-image: none;
-  background-color: $grey-dark !important;
-  border: 5px solid $grey;
-  border-radius: 5px;
+  background-color: none;
   box-shadow: 1px 1px 10px $grey-darkest;
+  margin: 25px;
+  border: 25px transparent;
+
+  &.bottom-left-arrow {
+    margin-top: -25px;
+    .arrow {
+      -webkit-mask-position: 0 -19px;
+      bottom: 6px;
+    }
+  }
+
+  &.top-left-arrow .arrow { top: 6px; }
 
   .arrow {
-    top: 1px;
     background-color: $grey;
     background-image: none;
     -webkit-mask-image: url(Images/popoverArrows.png);
   }
 
-  .source-frame-popover-title {
+  .content {
+    background-color: $grey-darkest !important;
+    border: 5px solid $grey;
+    border-radius: 5px;
+  }
+
+  .inline-block {
+    width: 100%;
+  }
+
+  .source-frame-popover-title, .function-popover-title {
     color: $grey-lightest;
     padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .function-popover-title {
+    border-bottom: 1px solid $grey-dark;
+  }
+
+  .console-formatted-undefined {
+    margin-left: 10px;
+    margin-top: 10px;
   }
 
   .source-frame-popover-tree {
@@ -435,4 +486,42 @@ button.status-bar-item .glyph {
   }
 }
 
+.prefix {
+  font-weight: bold;
+  color:#fff;
+}
 
+.suggest-box {
+  margin-top: 5px;
+  margin-bottom: -5px;
+  background: $grey-darkest !important;
+  color:$grey-lightest !important;
+  border: none !important;
+  box-shadow: 1px 1px 10px $grey-darkest !important;
+  &.above-anchor {
+    margin-top: -5px;
+    border-bottom: none;
+    border-top: 5px solid $grey-dark;
+  }
+
+  .container {
+    border-radius: 3px;
+  }
+
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .suggest-box-content-item {
+    padding: 2px;
+    &.selected {
+      background-color: $blue !important;
+      color: $black;
+    }
+
+    &:hover:not(.selected) {
+      background-color: $grey-darkest !important;
+      border: 1px solid transparent !important;
+    }
+  }
+}
