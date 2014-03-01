@@ -525,3 +525,11 @@ button.status-bar-item .glyph {
     }
   }
 }
+
+fieldset[disabled] {
+  color: $grey-light;
+  input {
+    background-color: $grey-light !important;
+    color: $grey-darkest !important;
+  }
+}

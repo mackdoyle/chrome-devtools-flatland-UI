@@ -856,3 +856,9 @@ button.status-bar-item .glyph {
     .suggest-box .suggest-box-content-item:hover:not(.selected) {
       background-color: #1d1f21 !important;
       border: 1px solid transparent !important; }
+
+fieldset[disabled] {
+  color: #4b4f53; }
+  fieldset[disabled] input {
+    background-color: #4b4f53 !important;
+    color: #1d1f21 !important; }
