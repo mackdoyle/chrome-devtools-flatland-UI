@@ -206,11 +206,12 @@ button.status-bar-item .glyph {
   width: 15px !important;
 }
 
-.properties {
+.section .properties {
   .name {
     color: $blue !important;
     &.dimmed {
       color: $blue-lightest;
+      opacity: 1;
     }
   }
 }
@@ -403,3 +404,35 @@ button.status-bar-item .glyph {
     }
   }
 }
+
+// Popover helper in popoverHelper.html for quicker styling, since it's really hard to get it to stay during development
+
+.popover {
+  -webkit-border-image: none;
+  background-color: $grey-dark !important;
+  border: 5px solid $grey;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px $grey-darkest;
+
+  .arrow {
+    top: 1px;
+    background-color: $grey;
+    background-image: none;
+    -webkit-mask-image: url(Images/popoverArrows.png);
+  }
+
+  .source-frame-popover-title {
+    color: $grey-lightest;
+    padding: 10px;
+  }
+
+  .source-frame-popover-tree {
+    top: 28px;
+    border-top: 1px solid $grey-darkest;
+    .separator {
+      color: $white;
+    }
+  }
+}
+
+
