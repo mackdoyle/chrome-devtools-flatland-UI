@@ -3,27 +3,47 @@ body#-blink-dev-tools .toolbar-background {
   border: none; }
 
 .toolbar {
-  flex: 0 0 36px;
+  flex: 0 0 28px;
   background: #1d1f21 !important;
   border-bottom: 1px solid #25292c; }
-  .toolbar .toolbar-controls-right {
-    background: #1d1f21; }
-    .toolbar .toolbar-controls-right #error-warning-count {
-      padding: 9px;
-      color: #f4f4f4; }
   .toolbar .toolbar-controls-left {
     opacity: 1;
+    padding-top: 0;
     background: #1d1f21; }
+    .toolbar .toolbar-controls-left .node-search-status-bar-item .glyph {
+      -webkit-mask-position: -226px -24px; }
     .toolbar .toolbar-controls-left button.status-bar-item.toggled-on {
       background: #2195f0 !important; }
       .toolbar .toolbar-controls-left button.status-bar-item.toggled-on .glyph {
         background-color: #f4f4f4 !important;
         opacity: 100%; }
+  .toolbar .tabbed-pane-header {
+    position: relative;
+    overflow: inherit;
+    border-bottom: none !important; }
+    .toolbar .tabbed-pane-header .tabbed-pane-header-tab {
+      padding: 5px 0; }
+      .toolbar .tabbed-pane-header .tabbed-pane-header-tab:hover {
+        background-color: #25292c !important; }
+      .toolbar .tabbed-pane-header .tabbed-pane-header-tab, .toolbar .tabbed-pane-header .tabbed-pane-header-tab.selected {
+        border-right: none;
+        border-left: none; }
+      .toolbar .tabbed-pane-header .tabbed-pane-header-tab.selected {
+        background-color: #2195f0 !important; }
+    .toolbar .tabbed-pane-header .tabbed-pane-header-tabs-drop-down {
+      top: 2px; }
+  .toolbar .toolbar-controls-right {
+    background: #1d1f21; }
+    .toolbar .toolbar-controls-right #error-warning-count {
+      padding: 0 9px;
+      color: #f4f4f4; }
   .toolbar button.status-bar-item {
-    margin: 3px;
+    margin: 0;
     width: 26px;
     height: 26px;
-    background: #31353a; }
+    background: none; }
+    .toolbar button.status-bar-item .glyph {
+      background-color: #4b4f53 !important; }
     .toolbar-controls-right .toolbar button.status-bar-item {
       margin: 3px;
       margin-left: 0; }
@@ -167,6 +187,9 @@ span.webkit-html-text-node.bogus {
   -webkit-mask-image: url(Images/statusbarButtonGlyphs.png); }
 .event-bars .event-bar .header .title {
   text-shadow: none; }
+
+.split-view-main {
+  overflow: hidden; }
 
 select.status-bar-item {
   color: #a3def2;

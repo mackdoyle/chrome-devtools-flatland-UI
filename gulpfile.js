@@ -1,6 +1,7 @@
 /* global require */
 "use strict";
 var gulp = require('gulp');
+var lr = require('gulp-livereload');
 var sass = require('gulp-sass');
 var bump = require('gulp-bump');
 var zip = require('gulp-zip');
@@ -13,7 +14,8 @@ gulp.task('pub', ['bump', 'compress']);
 gulp.task('sass', function() {
   gulp.src('./scss/flatland.scss')
     .pipe(sass({ errLogToConsole: true }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(lr());
 });
 
 gulp.task('watch', function() {

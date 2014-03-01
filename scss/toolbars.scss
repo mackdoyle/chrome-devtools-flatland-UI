@@ -6,19 +6,17 @@ body#-blink-dev-tools .toolbar-background {
 }
 
 .toolbar {
-  flex: 0 0 36px;
+  flex: 0 0 28px;
   background: $grey-darkest !important;
   border-bottom: 1px solid $grey-dark;
-  .toolbar-controls-right {
-    background: $grey-darkest;
-    #error-warning-count {
-      padding: 9px;
-      color: $white;
-    }
-  }
+
   .toolbar-controls-left {
     opacity: 1;
+    padding-top: 0;
     background: $grey-darkest;
+    .node-search-status-bar-item .glyph {
+      -webkit-mask-position: -226px -24px;
+    }
     button.status-bar-item.toggled-on {
       background: $blue !important;
       .glyph {
@@ -27,11 +25,44 @@ body#-blink-dev-tools .toolbar-background {
       }
     }
   }
+
+  .tabbed-pane-header {
+    position: relative;
+    overflow: inherit;
+    border-bottom: none !important;
+    .tabbed-pane-header-tab {
+      padding: 5px 0;
+      &:hover {
+        background-color: $grey-dark !important;
+      }
+      &, &.selected {
+        border-right: none;
+        border-left: none;
+      }
+      &.selected {
+        background-color: $blue !important;
+      }
+    }
+    .tabbed-pane-header-tabs-drop-down {
+      top: 2px;
+    }
+  }
+
+  .toolbar-controls-right {
+    background: $grey-darkest;
+    #error-warning-count {
+      padding: 0 9px;
+      color: $white;
+    }
+  }
+
   button.status-bar-item {
-    margin: 3px;
+    margin: 0;
     width: 26px;
-    height: 26px;
-    background: $grey;
+    height: 27px;
+    .glyph {
+      background-color: $grey-light !important;
+    }
     .toolbar-controls-right & {
       margin: 3px;
       margin-left: 0;
