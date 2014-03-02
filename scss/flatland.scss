@@ -50,24 +50,48 @@
   display:none !important;
 }
 
+// Reset State
 .styles-section.matched-styles .properties li.parent .expand-element,
 .properties-tree li.parent::before,
 .section > .header::before,
 .sidebar-pane-title::before,
-.audit-result-tree li.parent::before {
+.audit-result-tree li.parent::before,
+.status-bar-select-arrow,
+.data-grid th.sort-descending > div::after,
+.data-grid th.sort-ascending > div::after{
   opacity: 1;
-  -webkit-mask-position: -4px -96px;
   background: none;
   background-color: $blue;
   -webkit-mask-image: url(Images/statusbarButtonGlyphs.png);
 }
 
+// Default State = Right Arrow
+.styles-section.matched-styles .properties li.parent .expand-element,
+.properties-tree li.parent::before,
+.section > .header::before,
+.sidebar-pane-title::before,
+.audit-result-tree li.parent::before {
+  -webkit-mask-position: -4px -96px;
+}
+
+// Expanded State = Down
 .styles-section.matched-styles .properties li.parent.expanded .expand-element,
 .properties-tree li.parent.expanded::before,
 .section.expanded > .header::before,
 .sidebar-pane-title.expanded::before,
 .audit-result-tree li.parent.expanded::before{
   -webkit-mask-position: -20px -96px;
+}
+
+// Default State = Down
+.status-bar-select-arrow,
+.data-grid th.sort-descending > div::after {
+  -webkit-mask-position: -20px -96px;
+}
+
+// Expanded State = Up
+.data-grid th.sort-ascending > div::after {
+  -webkit-mask-position: -4px -108px;
 }
 
 //~~~~ GLOBAL ELEMENTS ~~~~//
@@ -226,41 +250,6 @@ button.status-bar-item .glyph {
   color: $grey-lightest;
 }
 
-// Scrollbar Styling
-// ::-webkit-scrollbar-track {
-//   width: 10px;
-//   border-radius: 10px;
-//   background-color: $grey;
-// }
-
-// ::-webkit-scrollbar {
-//   width: 15px;
-//   background-color: $grey;
-//   bottom: 0;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//   width: 15px;
-//   background-color: $grey-light;
-//   border-radius: 6px;
-// }
-
-// .CodeMirror-hscrollbar {
-//   right: 15px !important;
-// }
-
-// //   overflow: inherit !important
-
-// .CodeMirror-vscrollbar {
-//   // bottom: 15px !important
-// }
-
-// .CodeMirror-scrollbar-filler {
-//   background-color: $grey;
-//   height: 15px !important;
-//   width: 15px !important;
-// }
-
 .section .properties {
   .name {
     color: $blue !important;
@@ -269,6 +258,10 @@ button.status-bar-item .glyph {
       opacity: 1;
     }
   }
+}
+
+.sidebar-tree-section {
+  text-shadow: none;
 }
 
 #scripts-debug-toolbar, .scripts-debug-toolbar, .sidebar-pane-title {
