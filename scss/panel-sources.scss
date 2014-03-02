@@ -79,11 +79,14 @@
     background: $grey;
     border: none;
     .subtitle {
-      color: $grey-darkest !important;
+      color: $grey-lightest !important;
     }
     &.selected {
       background: $blue;
       border: none;
+      .subtitle {
+        color: $grey-darkest !important;
+      }
     }
     .subtitle {
       color: $grey-lightest;

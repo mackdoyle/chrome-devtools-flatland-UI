@@ -369,10 +369,12 @@ select.status-bar-item {
   background: #31353a;
   border: none; }
   .panel.sources .placard .subtitle, .panel.sources .placard + .info .subtitle {
-    color: #1d1f21 !important; }
+    color: #77797d !important; }
   .panel.sources .placard.selected, .panel.sources .placard + .info.selected {
     background: #2195f0;
     border: none; }
+    .panel.sources .placard.selected .subtitle, .panel.sources .placard + .info.selected .subtitle {
+      color: #1d1f21 !important; }
   .panel.sources .placard .subtitle, .panel.sources .placard + .info .subtitle {
     color: #77797d; }
 .panel.sources .watch-expressions li {
@@ -497,6 +499,8 @@ select.status-bar-item {
   padding: 5px;
   color: #77797d;
   text-shadow: none; }
+.panel.audits .sidebar-pane-title {
+  background-color: #121316; }
 .panel.audits .audit-launcher-view div.button-container > button {
   background: #2195f0;
   border: none;
