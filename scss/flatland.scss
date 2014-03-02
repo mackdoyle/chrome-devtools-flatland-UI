@@ -53,7 +53,8 @@
 .styles-section.matched-styles .properties li.parent .expand-element,
 .properties-tree li.parent::before,
 .section > .header::before,
-.sidebar-pane-title::before {
+.sidebar-pane-title::before,
+.audit-result-tree li.parent::before {
   opacity: 1;
   -webkit-mask-position: -4px -96px;
   background: none;
@@ -64,7 +65,8 @@
 .styles-section.matched-styles .properties li.parent.expanded .expand-element,
 .properties-tree li.parent.expanded::before,
 .section.expanded > .header::before,
-.sidebar-pane-title.expanded::before {
+.sidebar-pane-title.expanded::before,
+.audit-result-tree li.parent.expanded::before{
   -webkit-mask-position: -20px -96px;
 }
 
@@ -266,6 +268,48 @@ button.status-bar-item .glyph {
       color: $blue-lightest;
       opacity: 1;
     }
+  }
+}
+
+#scripts-debug-toolbar, .scripts-debug-toolbar, .sidebar-pane-title {
+  height: 30px;
+  flex: 0 0 30px;
+  padding: 5px;
+  flex: 0 0 30px;
+  background: $grey !important;
+  border-top: 1px solid $grey-darkest;
+  border-bottom: 1px solid $grey-darkest;
+  color: $white;
+  .status-bar-item {
+    top: -3px;
+  }
+}
+.sidebar-pane {
+  padding: 5px 0;
+  .breakpoints-list-deactivated {
+    background: $grey-light;
+    opacity: 1;
+    li {
+      padding: 5px;
+      color: $grey-darkest;
+    }
+  }
+}
+.placard, .placard + .info {
+  background: $grey;
+  border: none;
+  .subtitle {
+    color: $grey-lightest !important;
+  }
+  &.selected {
+    background: $blue;
+    border: none;
+    .subtitle {
+      color: $grey-darkest !important;
+    }
+  }
+  .subtitle {
+    color: $grey-lightest;
   }
 }
 
