@@ -578,12 +578,15 @@ select.status-bar-item {
 .CodeMirror-scrollbar-filler {
   display: none !important; }
 
-.properties-tree li.parent::before, .section > .header::before {
+.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before {
   opacity: 1;
   -webkit-mask-position: -4px -96px;
   background: none;
   background-color: #2195f0;
   -webkit-mask-image: url(Images/statusbarButtonGlyphs.png); }
+
+.styles-section.matched-styles .properties li.parent.expanded .expand-element, .properties-tree li.parent.expanded::before, .section.expanded > .header::before, .sidebar-pane-title.expanded::before {
+  -webkit-mask-position: -20px -96px; }
 
 #console-messages, .console-view-wrapper, #console-view, .CodeMirror-scroll, .drawer .revision-history-drawer, .dialog .fill, .panel, .console-status-bar, .help-window-main, .tabbed-pane-content, .tabbed-pane-content.has-no-tabs, .sidebar-overlay, .styles-section.read-only, .split-view-vertical .sidebar-pane.composite .properties-tree, .panel:not(.elements), .panel:not(.extension-panel), #network-views .CodeMirror-lines, #script-view-fallback, .panel-status-bar, .sidebar, body.inactive .sidebar {
   color: #f4f4f4;
