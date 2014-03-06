@@ -279,7 +279,8 @@ select.status-bar-item {
   color: #1d1f21; }
 
 body.platform-windows option {
-  background: #292929; }
+  background: #292929;
+  color: #a3def2; }
 
 .panel-status-bar {
   flex-basis: 36px;
