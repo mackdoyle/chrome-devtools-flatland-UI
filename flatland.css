@@ -190,7 +190,7 @@ span.webkit-html-text-node.bogus {
 .event-bars .event-bar .header .title {
   text-shadow: none; }
 
-.split-view-main {
+div.split-view-contents.scroll-target.split-view-contents-first.split-view-main.vbox {
   overflow: hidden; }
 
 select.status-bar-item {
