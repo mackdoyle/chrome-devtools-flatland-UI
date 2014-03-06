@@ -59,7 +59,8 @@
 .status-bar-select-arrow,
 .data-grid th.sort-descending > div::after,
 .data-grid th.sort-ascending > div::after,
-.timeline-expandable-arrow {
+.timeline-expandable-arrow,
+.filter-checkbox-filter .checkbox-filter-checkbox-checked {
   opacity: 1;
   background: none;
   background-color: $blue;
@@ -95,6 +96,11 @@
 // Expanded State = Up
 .data-grid th.sort-ascending > div::after {
   -webkit-mask-position: -4px -108px;
+}
+
+.filter-checkbox-filter .checkbox-filter-checkbox-checked {
+  -webkit-mask-position: -129px -110px;
+  background-color: $white;
 }
 
 //~~~~ GLOBAL ELEMENTS ~~~~//

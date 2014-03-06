@@ -5,6 +5,11 @@
   border-bottom: 1px solid $grey-darkest;
 }
 
+.filter-bitset-filter li.selected {
+  background-color: $blue;
+  border-radius: 2px;
+}
+
 .network-log-grid.data-grid {
 
   th, th.sort-descending,

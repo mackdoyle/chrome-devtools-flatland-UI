@@ -287,6 +287,10 @@ body.platform-windows option {
   padding: 5px;
   border-bottom: 1px solid #1d1f21; }
 
+.filter-bitset-filter li.selected {
+  background-color: #2195f0;
+  border-radius: 2px; }
+
 .network-log-grid.data-grid th, .network-log-grid.data-grid th.sort-descending, .network-log-grid.data-grid th.sort-ascending {
   background: #25292c; }
 .network-log-grid.data-grid tr.filler {
@@ -573,7 +577,7 @@ body.platform-windows option {
 .CodeMirror-scrollbar-filler {
   display: none !important; }
 
-.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before, .audit-result-tree li.parent::before, .status-bar-select-arrow, .data-grid th.sort-descending > div::after, .data-grid th.sort-ascending > div::after, .timeline-expandable-arrow {
+.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before, .audit-result-tree li.parent::before, .status-bar-select-arrow, .data-grid th.sort-descending > div::after, .data-grid th.sort-ascending > div::after, .timeline-expandable-arrow, .filter-checkbox-filter .checkbox-filter-checkbox-checked {
   opacity: 1;
   background: none;
   background-color: #2195f0;
@@ -590,6 +594,10 @@ body.platform-windows option {
 
 .data-grid th.sort-ascending > div::after {
   -webkit-mask-position: -4px -108px; }
+
+.filter-checkbox-filter .checkbox-filter-checkbox-checked {
+  -webkit-mask-position: -129px -110px;
+  background-color: #f4f4f4; }
 
 #console-messages, .console-view-wrapper, #console-view, .CodeMirror-scroll, .drawer .revision-history-drawer, .dialog .fill, .panel, .console-status-bar, .help-window-main, .tabbed-pane-content, .tabbed-pane-content.has-no-tabs, .sidebar-overlay, .styles-section.read-only, .split-view-vertical .sidebar-pane.composite .properties-tree, .panel:not(.elements), .panel:not(.extension-panel), #network-views .CodeMirror-lines, #script-view-fallback, .panel-status-bar, .sidebar, body.inactive .sidebar {
   color: #f4f4f4;
