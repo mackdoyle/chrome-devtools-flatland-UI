@@ -68,3 +68,18 @@
     background: $grey-light;
   }
 }
+
+.resources-dividers-label-bar {
+  background: rgba($grey-light,.4);
+}
+
+.overview-grid-window-resizer {
+  background: $grey-lightest;
+  box-shadow: $grey-dark 1px 0 0, $grey-dark -1px 0 0, $grey-dark 0 1px 0, $grey-dark 0 -1px 0;
+}
+
+.info-table {
+  padding: 1em;
+  background: $grey-darkest;
+  border: 2px solid $grey;
+}

@@ -298,6 +298,9 @@ body.platform-windows option {
 .network-log-grid.data-grid .data-container {
   top: 37px; }
 
+.data-grid table.data, .network-log-grid.data-grid table.data {
+  background-image: none; }
+
 .panel.network .data-grid th {
   background: #25292c; }
 .panel.network .tabbed-pane-header .tabbed-pane-header-tab {
@@ -418,6 +421,18 @@ body.platform-windows option {
   .network-cell-subtitle:hover .data-grid-resizer {
     width: 1px;
     background: #4b4f53; }
+
+.resources-dividers-label-bar {
+  background: rgba(75, 79, 83, 0.4); }
+
+.overview-grid-window-resizer {
+  background: #77797d;
+  box-shadow: #25292c 1px 0 0, #25292c -1px 0 0, #25292c 0 1px 0, #25292c 0 -1px 0; }
+
+.info-table {
+  padding: 1em;
+  background: #1d1f21;
+  border: 2px solid #31353a; }
 
 .panel.timeline .timeline-records-title, .panel.timeline .timeline-records-list {
   background: #25292c;

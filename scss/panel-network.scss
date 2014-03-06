@@ -6,6 +6,7 @@
 }
 
 .network-log-grid.data-grid {
+
   th, th.sort-descending,
   th.sort-ascending {
     background: $grey-dark;
@@ -26,6 +27,10 @@
   .data-container {
     top: 37px;
   }
+}
+
+.data-grid table.data, .network-log-grid.data-grid table.data {
+  background-image:none;
 }
 
 .panel.network {
