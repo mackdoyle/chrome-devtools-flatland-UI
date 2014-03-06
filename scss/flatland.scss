@@ -58,7 +58,8 @@
 .audit-result-tree li.parent::before,
 .status-bar-select-arrow,
 .data-grid th.sort-descending > div::after,
-.data-grid th.sort-ascending > div::after{
+.data-grid th.sort-ascending > div::after,
+.timeline-expandable-arrow {
   opacity: 1;
   background: none;
   background-color: $blue;
@@ -70,7 +71,8 @@
 .properties-tree li.parent::before,
 .section > .header::before,
 .sidebar-pane-title::before,
-.audit-result-tree li.parent::before {
+.audit-result-tree li.parent::before,
+.timeline-expandable-collapsed .timeline-expandable-arrow {
   -webkit-mask-position: -4px -96px;
 }
 
@@ -79,7 +81,8 @@
 .properties-tree li.parent.expanded::before,
 .section.expanded > .header::before,
 .sidebar-pane-title.expanded::before,
-.audit-result-tree li.parent.expanded::before{
+.audit-result-tree li.parent.expanded::before,
+.timeline-expandable-expanded .timeline-expandable-arrow {
   -webkit-mask-position: -20px -96px;
 }
 
@@ -568,6 +571,24 @@ button.status-bar-item .glyph {
     border-top: 1px solid $grey-darkest;
     .separator {
       color: $white;
+    }
+  }
+
+  table {
+    width: 100%;
+    color: $white;
+
+    tr {
+      line-height: 1.5em;
+    }
+
+    td.timeline-details.timeline-details-row-title {
+      color: $blue-light;
+    }
+
+    td.timeline-details-title {
+      padding: .5em;
+      border-bottom: 1px solid $grey;
     }
   }
 }

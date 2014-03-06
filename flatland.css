@@ -422,7 +422,7 @@ body.platform-windows option {
     width: 1px;
     background: #4b4f53; }
 
-.resources-dividers-label-bar {
+.resources-dividers-label-bar, .overview-grid-dividers-background {
   background: rgba(75, 79, 83, 0.4); }
 
 .overview-grid-window-resizer {
@@ -451,6 +451,8 @@ body.platform-windows option {
   background: #2195f0;
   border-left: 6px solid #a3def2;
   color: #f4f4f4; }
+  .panel.timeline #timeline-overview-sidebar .sidebar-tree-item.selected .icon {
+    background-color: #f4f4f4; }
 .panel.timeline #timeline-overview-frames canvas {
   background: #25292c; }
 .panel.timeline #memory-graphs-container .split-view-contents-first {
@@ -462,9 +464,14 @@ body.platform-windows option {
   color: #f4f4f4; }
 .panel.timeline .timeline-tree-item .data.dimmed, .panel.timeline .timeline-details-view-row-title {
   color: #77797d; }
+.panel.timeline .overview-grid-window-rulers {
+  background: #f4f4f4; }
 
 .overview-grid-window {
   background: #2195f0; }
+
+#timeline-overview-sidebar .icon {
+  background: #77797d; }
 
 .resources.panel .sidebar li {
   height: 20px;
@@ -566,16 +573,16 @@ body.platform-windows option {
 .CodeMirror-scrollbar-filler {
   display: none !important; }
 
-.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before, .audit-result-tree li.parent::before, .status-bar-select-arrow, .data-grid th.sort-descending > div::after, .data-grid th.sort-ascending > div::after {
+.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before, .audit-result-tree li.parent::before, .status-bar-select-arrow, .data-grid th.sort-descending > div::after, .data-grid th.sort-ascending > div::after, .timeline-expandable-arrow {
   opacity: 1;
   background: none;
   background-color: #2195f0;
   -webkit-mask-image: url(Images/statusbarButtonGlyphs.png); }
 
-.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before, .audit-result-tree li.parent::before {
+.styles-section.matched-styles .properties li.parent .expand-element, .properties-tree li.parent::before, .section > .header::before, .sidebar-pane-title::before, .audit-result-tree li.parent::before, .timeline-expandable-collapsed .timeline-expandable-arrow {
   -webkit-mask-position: -4px -96px; }
 
-.styles-section.matched-styles .properties li.parent.expanded .expand-element, .properties-tree li.parent.expanded::before, .section.expanded > .header::before, .sidebar-pane-title.expanded::before, .audit-result-tree li.parent.expanded::before {
+.styles-section.matched-styles .properties li.parent.expanded .expand-element, .properties-tree li.parent.expanded::before, .section.expanded > .header::before, .sidebar-pane-title.expanded::before, .audit-result-tree li.parent.expanded::before, .timeline-expandable-expanded .timeline-expandable-arrow {
   -webkit-mask-position: -20px -96px; }
 
 .status-bar-select-arrow, .data-grid th.sort-descending > div::after {
@@ -904,6 +911,16 @@ button.status-bar-item .glyph {
     border-top: 1px solid #1d1f21; }
     .popover .source-frame-popover-tree .separator {
       color: #f4f4f4; }
+  .popover table {
+    width: 100%;
+    color: #f4f4f4; }
+    .popover table tr {
+      line-height: 1.5em; }
+    .popover table td.timeline-details.timeline-details-row-title {
+      color: #73aabd; }
+    .popover table td.timeline-details-title {
+      padding: 0.5em;
+      border-bottom: 1px solid #31353a; }
 
 .prefix {
   font-weight: bold;

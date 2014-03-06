@@ -20,6 +20,9 @@
     background: $blue;
     border-left: 6px solid $blue-lightest;
     color: $white;
+    .icon {
+      background-color: $white;
+    }
   }
   #timeline-overview-frames canvas {
     background: $grey-dark;
@@ -37,8 +40,15 @@
   .timeline-tree-item .data.dimmed, .timeline-details-view-row-title {
     color: $grey-lightest;
   }
+  .overview-grid-window-rulers {
+    background: $white;
+  }
 }
 
 .overview-grid-window {
   background: $blue;
+}
+
+#timeline-overview-sidebar .icon {
+  background: $grey-lightest;
 }
