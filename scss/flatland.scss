@@ -315,6 +315,10 @@ button.status-bar-item .glyph {
   }
 }
 
+.placard:nth-of-type(2n) {
+  background-color: $grey-dark;
+}
+
 .sidebar-pane-toolbar {
   .panel.elements & > select.select-settings {
     -webkit-mask-image: url(chrome-devtools://devtools/bundled/Images/paneSettingsButtons.png);
