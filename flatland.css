@@ -57,32 +57,35 @@ ol.elements-tree-outline .selected {
   ol.elements-tree-outline .selected .selection {
     background: #31353a !important; }
 
-.webkit-html-tag-name, .styles-section .simple-selector.selector-matches, .styles-section .selector {
-  color: #bdda6e; }
+body /deep/ .webkit-html-tag-name, .styles-section .simple-selector.selector-matches, .styles-section .selector {
+  color: #bdda6e !important; }
 
-.webkit-html-tag {
-  color: #65a4a4; }
+body /deep/ .webkit-html-tag {
+  color: #65a4a4 !important; }
 
-.webkit-html-tag-name {
-  color: #bdda6e; }
+body /deep/ .webkit-html-tag-name {
+  color: #bdda6e !important; }
 
-.webkit-html-attribute-name {
-  color: #e0dc6d; }
+body /deep/ .webkit-html-attribute-name {
+  color: #e0dc6d !important; }
 
-.webkit-html-attribute-value {
-  color: #a3def2; }
+body /deep/ .webkit-html-attribute-value {
+  color: #a3def2 !important; }
 
-span.webkit-html-text-node.bogus {
-  color: #2195f0; }
+body /deep/ span.webkit-html-text-node.bogus {
+  color: #2195f0 !important; }
 
-.webkit-html-pseudo-element {
-  color: #fb5c69; }
+body /deep/ .webkit-html-pseudo-element {
+  color: #fb5c69 !important; }
 
-.webkit-html-comment {
+body /deep/ .webkit-html-comment {
   color: #77797d; }
 
-.webkit-css-property {
+body /deep/ .webkit-css-property {
   color: #73aabd; }
+
+body /deep/ .webkit-html-external-link, body /deep/ .webkit-html-resource-link {
+  color: #2195f0; }
 
 .metrics-and-styles .properties .value {
   color: #f29a46; }
@@ -175,6 +178,14 @@ span.webkit-html-text-node.bogus {
       color: #f4f4f4; }
     #elements-crumbs .crumbs .crumb.selected.start {
       background: #1d1f21; }
+
+html /deep/ .selected.selection {
+  background-color: #1d1f21 !important;
+}
+
+.styles-section.read-only:not(.computed-style) {
+  background: #1d1f21 !important;
+}
 
 .panel.elements .metrics {
   color: #1d1f21; }
@@ -371,9 +382,9 @@ body.platform-windows option {
   background-color: #1d1f21 !important;
   outline: none !important; }
 
-.cm-highlight {
+html /deep/ .highlight, .cm-highlight {
   -webkit-animation: none;
-  background: #4b4f53; }
+  color: #4b4f53; }
 
 .sidebar-pane .breakpoint-hit {
   background: #1764a0; }
@@ -782,6 +793,18 @@ button.status-bar-item .glyph {
   background-color: #2195f0;
   color: #f4f4f4 !important; }
 
+span.webkit-html-tag {
+  color: #dcf080; }
+
+span.webkit-html-attribute-name {
+  color: #e0dc6d; }
+
+span.webkit-html-string {
+  color: #a3def2; }
+
+span.webkit-html-comment {
+  color: #77797d; }
+
 .CodeMirror .CodeMirror-selected {
   background-color: #1d1f21; }
 .CodeMirror pre {
@@ -798,13 +821,13 @@ button.status-bar-item .glyph {
 .CodeMirror div.CodeMirror-cursor {
   border-left: 1px solid #f4f4f4;
   z-index: 3; }
-.CodeMirror .cm-xml-tag {
+.CodeMirror .cm-xml-tag, .CodeMirror .webkit-html-tag {
   color: #dcf080; }
-.CodeMirror .cm-xml-attribute {
+.CodeMirror .cm-xml-attribute, .CodeMirror .webkit-html-attribute {
   color: #e0dc6d; }
-.CodeMirror .cm-xml-string {
+.CodeMirror .cm-xml-string, .CodeMirror .webkit-html-string {
   color: #a3def2; }
-.CodeMirror .cm-xml-comment {
+.CodeMirror .cm-xml-comment, .CodeMirror .webkit-html-comment {
   color: #77797d; }
 .CodeMirror .cm-punctation {
   color: #f29a46; }

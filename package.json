@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "gulp-livereload": "^3.6.0"
   }
 }

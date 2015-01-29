@@ -375,6 +375,19 @@ button.status-bar-item .glyph {
   color: $white !important;
 }
 
+span.webkit-html-tag {
+  color: $vomit;
+}
+span.webkit-html-attribute-name {
+  color: $mustard;
+}
+span.webkit-html-string {
+  color: $blue-lightest;
+}
+span.webkit-html-comment {
+  color: $grey-lightest;
+}
+
 .CodeMirror {
   .CodeMirror-selected {
     background-color: $grey-darkest;
@@ -402,16 +415,16 @@ button.status-bar-item .glyph {
   }
   // Source Syntax Highlighting
   // HTML/XML
-  .cm-xml-tag {
+  .cm-xml-tag, .webkit-html-tag {
     color: $vomit;
   }
-  .cm-xml-attribute {
+  .cm-xml-attribute, .webkit-html-attribute {
     color: $mustard;
   }
-  .cm-xml-string {
+  .cm-xml-string, .webkit-html-string {
     color: $blue-lightest;
   }
-  .cm-xml-comment {
+  .cm-xml-comment, .webkit-html-comment {
     color: $grey-lightest;
   }
   .cm-punctation {
